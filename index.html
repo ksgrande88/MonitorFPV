@@ -85,6 +85,165 @@
       text-align: right;
     }
 
+    #monitorfpv-landing-mockup .monitorfpv-topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-language {
+      position: relative;
+      z-index: 20;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-language-toggle,
+    #monitorfpv-landing-mockup .monitorfpv-language-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #e8edef;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-language-toggle {
+      min-height: 38px;
+      padding: 6px 10px 6px 7px;
+      background: linear-gradient(180deg, #22292d, #111619);
+      border: 1px solid #3b464c;
+      border-radius: 20px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 5px 16px rgba(0, 0, 0, 0.28);
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-language-toggle:hover,
+    #monitorfpv-landing-mockup .monitorfpv-language-toggle[aria-expanded="true"] {
+      border-color: #f09a2c;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-language-toggle:focus-visible,
+    #monitorfpv-landing-mockup .monitorfpv-language-option:focus-visible {
+      outline: 2px solid #f4a137;
+      outline-offset: 2px;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-language-label {
+      font-size: 11px;
+      white-space: nowrap;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-language-short { display: none; }
+
+    #monitorfpv-landing-mockup .monitorfpv-language-chevron {
+      width: 6px;
+      height: 6px;
+      margin: -3px 1px 0 2px;
+      border-right: 1px solid #aab4b9;
+      border-bottom: 1px solid #aab4b9;
+      transform: rotate(45deg);
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-language-menu {
+      position: absolute;
+      top: calc(100% + 7px);
+      right: 0;
+      min-width: 174px;
+      padding: 5px;
+      background: rgba(13, 17, 20, 0.98);
+      border: 1px solid #3b464c;
+      border-radius: 10px;
+      box-shadow: 0 15px 32px rgba(0, 0, 0, 0.55);
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-language-menu[hidden] { display: none; }
+
+    #monitorfpv-landing-mockup .monitorfpv-language-option {
+      width: 100%;
+      min-height: 39px;
+      padding: 7px 9px;
+      background: transparent;
+      border: 0;
+      border-radius: 7px;
+      font-size: 11px;
+      text-align: left;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-language-option:hover,
+    #monitorfpv-landing-mockup .monitorfpv-language-option[aria-checked="true"] {
+      color: #ffffff;
+      background: linear-gradient(90deg, rgba(244, 161, 55, 0.17), rgba(105, 231, 126, 0.08));
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-flag {
+      position: relative;
+      flex: 0 0 22px;
+      width: 22px;
+      height: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.58);
+      border-radius: 50%;
+      box-shadow: inset 0 -3px 5px rgba(0, 0, 0, 0.34), 0 0 8px rgba(255, 255, 255, 0.13);
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-flag::after {
+      content: "";
+      position: absolute;
+      inset: 1px 2px auto;
+      height: 42%;
+      border-radius: 50%;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+      pointer-events: none;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-flag--us {
+      background: repeating-linear-gradient(to bottom, #b22234 0 7.7%, #fff 7.7% 15.4%);
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-flag--us i {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 53%;
+      height: 54%;
+      background: #3c3b6e;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-flag--us i::after {
+      content: "✦";
+      position: absolute;
+      inset: 0;
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 7px;
+      line-height: 11px;
+      text-align: center;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-flag--br { background: #009b3a; }
+
+    #monitorfpv-landing-mockup .monitorfpv-flag--br i {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: 10px;
+      height: 10px;
+      background: #ffdf00;
+      transform: rotate(45deg);
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-flag--br i::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #002776;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-flag--ua {
+      background: linear-gradient(to bottom, #0057b7 0 50%, #ffd700 50% 100%);
+    }
+
     #monitorfpv-landing-mockup .monitorfpv-layout {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -337,6 +496,10 @@
       #monitorfpv-landing-mockup { border-radius: 14px; }
       #monitorfpv-landing-mockup .monitorfpv-topbar { padding: 12px 15px; }
       #monitorfpv-landing-mockup .monitorfpv-slogan { display: none; }
+      #monitorfpv-landing-mockup .monitorfpv-topbar-actions { gap: 8px; }
+      #monitorfpv-landing-mockup .monitorfpv-language-full { display: none; }
+      #monitorfpv-landing-mockup .monitorfpv-language-short { display: inline; }
+      #monitorfpv-landing-mockup .monitorfpv-language-toggle { min-height: 36px; padding-right: 9px; }
       #monitorfpv-landing-mockup .monitorfpv-layout { display: block; min-height: 0; }
       #monitorfpv-landing-mockup .monitorfpv-left { display: block; border-right: 0; }
       #monitorfpv-landing-mockup .monitorfpv-hero { min-height: 0; padding: 24px 17px 38px; }
@@ -351,86 +514,110 @@
 
   <header class="monitorfpv-topbar">
     <div class="monitorfpv-brand">
-      <img src="./monitorfpv-landing-page_files/icon-192.png" alt="MonitorFPV compass and map icon">
+      <img src="./monitorfpv-landing-page_files/icon-192.png" alt="MonitorFPV compass and map icon" data-i18n-alt="brandAlt">
       <div class="monitorfpv-name">Monitor<span>FPV</span></div>
     </div>
-    <div class="monitorfpv-slogan">Plan online. Monitor locally. Fly prepared.</div>
+    <div class="monitorfpv-topbar-actions">
+      <div class="monitorfpv-language">
+        <button class="monitorfpv-language-toggle" type="button" aria-haspopup="menu" aria-expanded="false" aria-label="Choose language" data-i18n-aria-label="chooseLanguage">
+          <span class="monitorfpv-flag monitorfpv-flag--us" aria-hidden="true"><i></i></span>
+          <span class="monitorfpv-language-label monitorfpv-language-full">English (US)</span>
+          <span class="monitorfpv-language-label monitorfpv-language-short">EN</span>
+          <span class="monitorfpv-language-chevron" aria-hidden="true"></span>
+        </button>
+        <div class="monitorfpv-language-menu" role="menu" hidden>
+          <button class="monitorfpv-language-option" type="button" role="menuitemradio" aria-checked="true" data-language="en-US">
+            <span class="monitorfpv-flag monitorfpv-flag--us" aria-hidden="true"><i></i></span>
+            <span>English (US)</span>
+          </button>
+          <button class="monitorfpv-language-option" type="button" role="menuitemradio" aria-checked="false" data-language="pt-BR">
+            <span class="monitorfpv-flag monitorfpv-flag--br" aria-hidden="true"><i></i></span>
+            <span>Português (BR)</span>
+          </button>
+          <button class="monitorfpv-language-option" type="button" role="menuitemradio" aria-checked="false" data-language="uk-UA">
+            <span class="monitorfpv-flag monitorfpv-flag--ua" aria-hidden="true"><i></i></span>
+            <span>Українська (UA)</span>
+          </button>
+        </div>
+      </div>
+      <div class="monitorfpv-slogan" data-i18n="slogan">Plan online. Monitor locally. Fly prepared.</div>
+    </div>
   </header>
 
   <main class="monitorfpv-layout">
     <div class="monitorfpv-left">
       <section class="monitorfpv-hero" aria-labelledby="monitorfpv-main-title">
-        <p class="monitorfpv-kicker">Ground support for FPV operations</p>
-        <h1 id="monitorfpv-main-title">See the mission <em>beyond the goggles.</em></h1>
+        <p class="monitorfpv-kicker" data-i18n="heroKicker">Ground support for FPV operations</p>
+        <h1 id="monitorfpv-main-title" data-i18n-html="heroTitle">See the mission <em>beyond the goggles.</em></h1>
         <div class="monitorfpv-preview">
-          <img class="monitorfpv-desktop-shot" src="./monitorfpv-landing-page_files/cockpit-layout-sample.png" alt="MonitorFPV desktop ground-station interface mockup">
-          <img class="monitorfpv-phone-shot" src="./monitorfpv-landing-page_files/01-flight-collapsed.png" alt="MonitorFPV mobile interface mockup">
+          <img class="monitorfpv-desktop-shot" src="./monitorfpv-landing-page_files/cockpit-layout-sample.png" alt="MonitorFPV desktop ground-station interface mockup" data-i18n-alt="desktopAlt">
+          <img class="monitorfpv-phone-shot" src="./monitorfpv-landing-page_files/01-flight-collapsed.png" alt="MonitorFPV mobile interface mockup" data-i18n-alt="mobileAlt">
         </div>
       </section>
 
       <section class="monitorfpv-downloads" aria-labelledby="monitorfpv-download-heading">
         <div class="monitorfpv-section-label">
-          <h2 id="monitorfpv-download-heading">Download MonitorFPV</h2>
-          <span>Choose your platform</span>
+          <h2 id="monitorfpv-download-heading" data-i18n="downloadHeading">Download MonitorFPV</h2>
+          <span data-i18n="choosePlatform">Choose your platform</span>
         </div>
         <div class="monitorfpv-platforms">
           <button class="monitorfpv-platform monitorfpv-ready" type="button" data-platform="Windows">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg>
-            <span><strong>Windows</strong><small>First release</small></span>
+            <span><strong>Windows</strong><small data-i18n="firstRelease">First release</small></span>
           </button>
           <button class="monitorfpv-platform" type="button" data-platform="macOS">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="12" rx="2"></rect><path d="M2 20h20M7 20l1-4h8l1 4"></path></svg>
-            <span><strong>macOS</strong><small>Planned</small></span>
+            <span><strong>macOS</strong><small data-i18n="planned">Planned</small></span>
           </button>
-          <button class="monitorfpv-platform" type="button" data-platform="Android">
+          <button class="monitorfpv-platform monitorfpv-ready" type="button" data-platform="Android">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"></rect><path d="M10 18h4"></path></svg>
-            <span><strong>Android</strong><small>Planned</small></span>
+            <span><strong>Android</strong><small data-i18n="released">Released</small></span>
           </button>
           <button class="monitorfpv-platform" type="button" data-platform="iOS">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="13" height="18" rx="2"></rect><rect x="15" y="8" width="6" height="12" rx="1.5"></rect><path d="M8 17h3M17.5 17h1"></path></svg>
-            <span><strong>iOS</strong><small>Planned</small></span>
+            <span><strong>iOS</strong><small data-i18n="planned">Planned</small></span>
           </button>
         </div>
-        <p class="monitorfpv-download-status" aria-live="polite">Windows will be the first complete-operation release.</p>
+        <p class="monitorfpv-download-status" aria-live="polite" data-i18n="downloadStatusInitial">Windows and Android are released for testing.</p>
       </section>
     </div>
 
     <article class="monitorfpv-copy">
       <section>
-        <p class="monitorfpv-kicker">Field awareness</p>
-        <h2>What is MonitorFPV?</h2>
-        <p>MonitorFPV receives telemetry from ExpressLRS-equipped drones and displays useful flight information on a computer or mobile device. It is intended for a ground-support operator assisting an FPV pilot in the field.</p>
+        <p class="monitorfpv-kicker" data-i18n="fieldAwareness">Field awareness</p>
+        <h2 data-i18n="whatHeading">What is MonitorFPV?</h2>
+        <p data-i18n="whatText">MonitorFPV receives telemetry from ExpressLRS-equipped drones and displays useful flight information on a computer or mobile device. It is intended for a ground-support operator assisting an FPV pilot in the field.</p>
       </section>
 
       <section>
-        <h2>Requirements</h2>
+        <h2 data-i18n="requirementsHeading">Requirements</h2>
         <ul>
-          <li>Drone with an ExpressLRS telemetry link, version 4.1 or newer.</li>
-          <li>Compatible transmitter or controller with ELRS Backpack 1.5.8 or newer.</li>
-          <li>Windows or macOS computer, or Android or iOS device, with Wi-Fi.</li>
-          <li>Internet during map preparation; prepared areas remain available offline.</li>
+          <li data-i18n="requirement1">Drone with an ExpressLRS telemetry link, version 4.1 or newer.</li>
+          <li data-i18n="requirement2">Compatible transmitter or controller with ELRS Backpack 1.5.8 or newer.</li>
+          <li data-i18n="requirement3">Windows or macOS computer, or Android or iOS device, with Wi-Fi.</li>
+          <li data-i18n="requirement4">Internet during map preparation; prepared areas remain available offline.</li>
         </ul>
       </section>
 
       <section>
-        <h2>Features</h2>
+        <h2 data-i18n="featuresHeading">Features</h2>
         <ul>
-          <li>Save selected map areas for later use without internet.</li>
-          <li>Create mission plans or import existing INAV missions.</li>
-          <li>Monitor link quality, battery, location, speed, attitude and flight status.</li>
-          <li>Follow the mission route and waypoint progress from the ground.</li>
+          <li data-i18n="feature1">Save selected map areas for later use without internet.</li>
+          <li data-i18n="feature2">Create mission plans or import existing INAV missions.</li>
+          <li data-i18n="feature3">Monitor link quality, battery, location, speed, attitude and flight status.</li>
+          <li data-i18n="feature4">Follow the mission route and waypoint progress from the ground.</li>
         </ul>
       </section>
 
       <section>
-        <h2>Quick start</h2>
+        <h2 data-i18n="quickStartHeading">Quick start</h2>
         <div class="monitorfpv-steps">
-          <div class="monitorfpv-step"><span class="monitorfpv-step-number">1</span><div><h3>Install</h3><p>Download the correct version for your device.</p></div></div>
-          <div class="monitorfpv-step"><span class="monitorfpv-step-number">2</span><div><h3>Prepare</h3><p>Save the operating area and create or import a mission while online.</p></div></div>
-          <div class="monitorfpv-step"><span class="monitorfpv-step-number">3</span><div><h3>Connect</h3><p>Join the ExpressLRS Backpack Wi-Fi network and confirm telemetry.</p></div></div>
-          <div class="monitorfpv-step"><span class="monitorfpv-step-number">4</span><div><h3>Monitor</h3><p>Support the FPV pilot with map, telemetry and waypoint awareness.</p></div></div>
+          <div class="monitorfpv-step"><span class="monitorfpv-step-number">1</span><div><h3 data-i18n="step1Heading">Install</h3><p data-i18n="step1Text">Download the correct version for your device.</p></div></div>
+          <div class="monitorfpv-step"><span class="monitorfpv-step-number">2</span><div><h3 data-i18n="step2Heading">Prepare</h3><p data-i18n="step2Text">Save the operating area and create or import a mission while online.</p></div></div>
+          <div class="monitorfpv-step"><span class="monitorfpv-step-number">3</span><div><h3 data-i18n="step3Heading">Connect</h3><p data-i18n="step3Text">Join the ExpressLRS Backpack Wi-Fi network and confirm telemetry.</p></div></div>
+          <div class="monitorfpv-step"><span class="monitorfpv-step-number">4</span><div><h3 data-i18n="step4Heading">Monitor</h3><p data-i18n="step4Text">Support the FPV pilot with map, telemetry and waypoint awareness.</p></div></div>
         </div>
-        <div class="monitorfpv-note">Internet is useful for preparation, but live telemetry and saved mission data remain local.</div>
+        <div class="monitorfpv-note" data-i18n="localNote">Internet is useful for preparation, but live telemetry and saved mission data remain local.</div>
       </section>
     </article>
   </main>
@@ -439,14 +626,248 @@
     (() => {
       const root = document.getElementById('monitorfpv-landing-mockup');
       const status = root.querySelector('.monitorfpv-download-status');
+      const languageControl = root.querySelector('.monitorfpv-language');
+      const languageToggle = root.querySelector('.monitorfpv-language-toggle');
+      const languageMenu = root.querySelector('.monitorfpv-language-menu');
+      const currentFlag = languageToggle.querySelector('.monitorfpv-flag');
+      const currentFullLabel = languageToggle.querySelector('.monitorfpv-language-full');
+      const currentShortLabel = languageToggle.querySelector('.monitorfpv-language-short');
+
+      const languages = {
+        'en-US': {
+          htmlLang: 'en-US',
+          label: 'English (US)',
+          short: 'EN',
+          flag: 'us',
+          title: 'MonitorFPV — Ground support for FPV operations',
+          description: 'MonitorFPV ground support for ExpressLRS-equipped FPV operations.',
+          text: {
+            chooseLanguage: 'Choose language',
+            brandAlt: 'MonitorFPV compass and map icon',
+            desktopAlt: 'MonitorFPV desktop ground-station interface mockup',
+            mobileAlt: 'MonitorFPV mobile interface mockup',
+            slogan: 'Plan online. Monitor locally. Fly prepared.',
+            heroKicker: 'Ground support for FPV operations',
+            heroTitle: 'See the mission <em>beyond the goggles.</em>',
+            downloadHeading: 'Download MonitorFPV',
+            choosePlatform: 'Choose your platform',
+            firstRelease: 'First release',
+            planned: 'Planned',
+            released: 'Released',
+            downloadStatusInitial: 'Windows and Android are released for testing.',
+            fieldAwareness: 'Field awareness',
+            whatHeading: 'What is MonitorFPV?',
+            whatText: 'MonitorFPV receives telemetry from ExpressLRS-equipped drones and displays useful flight information on a computer or mobile device. It is intended for a ground-support operator assisting an FPV pilot in the field.',
+            requirementsHeading: 'Requirements',
+            requirement1: 'Drone with an ExpressLRS telemetry link, version 4.1 or newer.',
+            requirement2: 'Compatible transmitter or controller with ELRS Backpack 1.5.8 or newer.',
+            requirement3: 'Windows or macOS computer, or Android or iOS device, with Wi-Fi.',
+            requirement4: 'Internet during map preparation; prepared areas remain available offline.',
+            featuresHeading: 'Features',
+            feature1: 'Save selected map areas for later use without internet.',
+            feature2: 'Create mission plans or import existing INAV missions.',
+            feature3: 'Monitor link quality, battery, location, speed, attitude and flight status.',
+            feature4: 'Follow the mission route and waypoint progress from the ground.',
+            quickStartHeading: 'Quick start',
+            step1Heading: 'Install',
+            step1Text: 'Download the correct version for your device.',
+            step2Heading: 'Prepare',
+            step2Text: 'Save the operating area and create or import a mission while online.',
+            step3Heading: 'Connect',
+            step3Text: 'Join the ExpressLRS Backpack Wi-Fi network and confirm telemetry.',
+            step4Heading: 'Monitor',
+            step4Text: 'Support the FPV pilot with map, telemetry and waypoint awareness.',
+            localNote: 'Internet is useful for preparation, but live telemetry and saved mission data remain local.'
+          },
+          platformStatus: {
+            Windows: 'Windows is released for complete-operation testing.',
+            Android: 'Android is released for field testing.',
+            macOS: 'macOS is on the roadmap and is not available yet.',
+            iOS: 'iOS is on the roadmap and is not available yet.'
+          }
+        },
+        'pt-BR': {
+          htmlLang: 'pt-BR',
+          label: 'Português (BR)',
+          short: 'PT',
+          flag: 'br',
+          title: 'MonitorFPV — Apoio terrestre para operações FPV',
+          description: 'MonitorFPV: apoio terrestre para operações FPV equipadas com ExpressLRS.',
+          text: {
+            chooseLanguage: 'Escolher idioma',
+            brandAlt: 'Ícone de bússola e mapa do MonitorFPV',
+            desktopAlt: 'Exemplo da interface desktop da estação de solo MonitorFPV',
+            mobileAlt: 'Exemplo da interface móvel do MonitorFPV',
+            slogan: 'Planeje online. Monitore localmente. Voe preparado.',
+            heroKicker: 'Apoio terrestre para operações FPV',
+            heroTitle: 'Veja a missão <em>além dos óculos.</em>',
+            downloadHeading: 'Baixe o MonitorFPV',
+            choosePlatform: 'Escolha sua plataforma',
+            firstRelease: 'Primeiro lançamento',
+            planned: 'Planejado',
+            released: 'Lançado',
+            downloadStatusInitial: 'Windows e Android estão disponíveis para testes.',
+            fieldAwareness: 'Consciência em campo',
+            whatHeading: 'O que é o MonitorFPV?',
+            whatText: 'O MonitorFPV recebe telemetria de drones equipados com ExpressLRS e exibe informações úteis de voo em um computador ou dispositivo móvel. Ele foi criado para o operador de apoio em solo que auxilia um piloto FPV em campo.',
+            requirementsHeading: 'Requisitos',
+            requirement1: 'Drone com link de telemetria ExpressLRS versão 4.1 ou mais recente.',
+            requirement2: 'Transmissor ou controle compatível com ELRS Backpack 1.5.8 ou mais recente.',
+            requirement3: 'Computador Windows ou macOS, ou dispositivo Android ou iOS, com Wi-Fi.',
+            requirement4: 'Internet durante a preparação do mapa; as áreas preparadas continuam disponíveis offline.',
+            featuresHeading: 'Recursos',
+            feature1: 'Salve áreas selecionadas do mapa para uso posterior sem internet.',
+            feature2: 'Crie planos de missão ou importe missões existentes do INAV.',
+            feature3: 'Monitore qualidade do link, bateria, localização, velocidade, atitude e estado do voo.',
+            feature4: 'Acompanhe do solo a rota da missão e o progresso dos waypoints.',
+            quickStartHeading: 'Início rápido',
+            step1Heading: 'Instale',
+            step1Text: 'Baixe a versão correta para o seu dispositivo.',
+            step2Heading: 'Prepare',
+            step2Text: 'Salve a área de operação e crie ou importe uma missão enquanto estiver online.',
+            step3Heading: 'Conecte',
+            step3Text: 'Entre na rede Wi-Fi do ExpressLRS Backpack e confirme a telemetria.',
+            step4Heading: 'Monitore',
+            step4Text: 'Apoie o piloto FPV acompanhando mapa, telemetria e waypoints.',
+            localNote: 'A internet é útil na preparação, mas a telemetria ao vivo e os dados salvos da missão permanecem locais.'
+          },
+          platformStatus: {
+            Windows: 'Windows está lançado para testes de operação completa.',
+            Android: 'Android está lançado para testes em campo.',
+            macOS: 'macOS está no planejamento e ainda não está disponível.',
+            iOS: 'iOS está no planejamento e ainda não está disponível.'
+          }
+        },
+        'uk-UA': {
+          htmlLang: 'uk',
+          label: 'Українська (UA)',
+          short: 'UA',
+          flag: 'ua',
+          title: 'MonitorFPV — Наземна підтримка FPV-операцій',
+          description: 'MonitorFPV: наземна підтримка FPV-операцій із використанням ExpressLRS.',
+          text: {
+            chooseLanguage: 'Обрати мову',
+            brandAlt: 'Значок компаса й мапи MonitorFPV',
+            desktopAlt: 'Приклад настільного інтерфейсу наземної станції MonitorFPV',
+            mobileAlt: 'Приклад мобільного інтерфейсу MonitorFPV',
+            slogan: 'Плануйте онлайн. Контролюйте локально. Літайте підготовленими.',
+            heroKicker: 'Наземна підтримка FPV-операцій',
+            heroTitle: 'Бачте місію <em>за межами окулярів.</em>',
+            downloadHeading: 'Завантажити MonitorFPV',
+            choosePlatform: 'Оберіть платформу',
+            firstRelease: 'Перший випуск',
+            planned: 'Заплановано',
+            released: 'Випущено',
+            downloadStatusInitial: 'Windows та Android доступні для тестування.',
+            fieldAwareness: 'Ситуаційна обізнаність',
+            whatHeading: 'Що таке MonitorFPV?',
+            whatText: 'MonitorFPV отримує телеметрію з дронів, оснащених ExpressLRS, і показує корисну польотну інформацію на комп’ютері або мобільному пристрої. Система призначена для оператора наземної підтримки, який допомагає FPV-пілоту в польових умовах.',
+            requirementsHeading: 'Вимоги',
+            requirement1: 'Дрон із телеметричним каналом ExpressLRS версії 4.1 або новішої.',
+            requirement2: 'Сумісний передавач або контролер з ELRS Backpack 1.5.8 або новішої версії.',
+            requirement3: 'Комп’ютер з Windows чи macOS або пристрій Android чи iOS із Wi-Fi.',
+            requirement4: 'Інтернет під час підготовки мапи; підготовлені ділянки залишаються доступними офлайн.',
+            featuresHeading: 'Можливості',
+            feature1: 'Зберігайте вибрані ділянки мапи для подальшого використання без інтернету.',
+            feature2: 'Створюйте плани місій або імпортуйте наявні місії INAV.',
+            feature3: 'Контролюйте якість зв’язку, батарею, місцезнаходження, швидкість, орієнтацію та стан польоту.',
+            feature4: 'Відстежуйте маршрут місії та проходження маршрутних точок із землі.',
+            quickStartHeading: 'Швидкий старт',
+            step1Heading: 'Встановіть',
+            step1Text: 'Завантажте відповідну версію для свого пристрою.',
+            step2Heading: 'Підготуйте',
+            step2Text: 'Збережіть район роботи та створіть або імпортуйте місію, поки є інтернет.',
+            step3Heading: 'Підключіться',
+            step3Text: 'Приєднайтеся до мережі Wi-Fi ExpressLRS Backpack і перевірте телеметрію.',
+            step4Heading: 'Контролюйте',
+            step4Text: 'Допомагайте FPV-пілоту, відстежуючи мапу, телеметрію та маршрутні точки.',
+            localNote: 'Інтернет корисний для підготовки, але жива телеметрія та збережені дані місії залишаються локальними.'
+          },
+          platformStatus: {
+            Windows: 'Версію для Windows випущено для повного операційного тестування.',
+            Android: 'Версію для Android випущено для польового тестування.',
+            macOS: 'Версія для macOS є в планах і поки недоступна.',
+            iOS: 'Версія для iOS є в планах і поки недоступна.'
+          }
+        }
+      };
+
+      let currentLanguage = 'en-US';
+
+      function closeLanguageMenu() {
+        languageMenu.hidden = true;
+        languageToggle.setAttribute('aria-expanded', 'false');
+      }
+
+      function applyLanguage(languageCode) {
+        const language = languages[languageCode] || languages['en-US'];
+        currentLanguage = languageCode in languages ? languageCode : 'en-US';
+
+        root.querySelectorAll('[data-i18n]').forEach((element) => {
+          const value = language.text[element.dataset.i18n];
+          if (value) element.textContent = value;
+        });
+        root.querySelectorAll('[data-i18n-html]').forEach((element) => {
+          const value = language.text[element.dataset.i18nHtml];
+          if (value) element.innerHTML = value;
+        });
+        root.querySelectorAll('[data-i18n-alt]').forEach((element) => {
+          const value = language.text[element.dataset.i18nAlt];
+          if (value) element.alt = value;
+        });
+        root.querySelectorAll('[data-i18n-aria-label]').forEach((element) => {
+          const value = language.text[element.dataset.i18nAriaLabel];
+          if (value) element.setAttribute('aria-label', value);
+        });
+
+        document.documentElement.lang = language.htmlLang;
+        document.title = language.title;
+        document.querySelector('meta[name="description"]').content = language.description;
+        currentFlag.className = `monitorfpv-flag monitorfpv-flag--${language.flag}`;
+        currentFullLabel.textContent = language.label;
+        currentShortLabel.textContent = language.short;
+        root.querySelectorAll('.monitorfpv-language-option').forEach((option) => {
+          option.setAttribute('aria-checked', String(option.dataset.language === currentLanguage));
+        });
+        try { localStorage.setItem('monitorfpv-language', currentLanguage); } catch (_) { /* storage may be unavailable */ }
+        closeLanguageMenu();
+      }
+
+      languageToggle.addEventListener('click', () => {
+        const willOpen = languageMenu.hidden;
+        languageMenu.hidden = !willOpen;
+        languageToggle.setAttribute('aria-expanded', String(willOpen));
+        if (willOpen) languageMenu.querySelector('[aria-checked="true"]')?.focus();
+      });
+
+      root.querySelectorAll('.monitorfpv-language-option').forEach((option) => {
+        option.addEventListener('click', () => {
+          applyLanguage(option.dataset.language);
+          languageToggle.focus();
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!languageControl.contains(event.target)) closeLanguageMenu();
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !languageMenu.hidden) {
+          closeLanguageMenu();
+          languageToggle.focus();
+        }
+      });
+
       root.querySelectorAll('.monitorfpv-platform').forEach((button) => {
         button.addEventListener('click', () => {
           const platform = button.dataset.platform;
-          status.textContent = platform === 'Windows'
-            ? 'Windows will be the first complete-operation release.'
-            : `${platform} is shown in the roadmap and is not available yet.`;
+          status.textContent = languages[currentLanguage].platformStatus[platform];
         });
       });
+
+      let savedLanguage = 'en-US';
+      try { savedLanguage = localStorage.getItem('monitorfpv-language') || 'en-US'; } catch (_) { /* use English */ }
+      applyLanguage(savedLanguage);
     })();
   </script>
 </div>
