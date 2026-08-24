@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b0d">
+  <meta name="description" content="MonitorFPV ground support for ExpressLRS-equipped FPV operations.">
+  <title>MonitorFPV — Ground support for FPV operations</title>
+  <link rel="icon" href="./monitorfpv-landing-page_files/icon-192.png">
+  <link rel="apple-touch-icon" href="./monitorfpv-landing-page_files/icon-192.png">
+</head>
+<body>
+<div id="monitorfpv-landing-mockup">
+  <style>
+    html {
+      min-width: 320px;
+      min-height: 100%;
+      background: #050708;
+    }
+
+    body {
+      min-height: 100%;
+      margin: 0;
+      padding: 16px;
+      background: #050708;
+    }
+
+    #monitorfpv-landing-mockup {
+      box-sizing: border-box;
+      color-scheme: dark;
+      width: 100%;
+      max-width: 1600px;
+      margin: 0 auto;
+      color: #eef2f3;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 14% 8%, rgba(75, 224, 94, 0.11), transparent 25%),
+        radial-gradient(circle at 84% 12%, rgba(244, 147, 30, 0.13), transparent 28%),
+        #080b0d;
+      border: 1px solid #283137;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.38);
+    }
+
+    #monitorfpv-landing-mockup * { box-sizing: border-box; }
+
+    #monitorfpv-landing-mockup .monitorfpv-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 14px 20px;
+      background: rgba(12, 16, 18, 0.94);
+      border-bottom: 1px solid #2b3439;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-brand img {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 18px rgba(71, 226, 103, 0.24);
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-name {
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 0.025em;
+      white-space: nowrap;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-name span { color: #69e77e; }
+
+    #monitorfpv-landing-mockup .monitorfpv-slogan {
+      color: #aab4b9;
+      font-size: 12px;
+      text-align: right;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      min-height: 700px;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-left {
+      display: grid;
+      grid-template-rows: minmax(0, 1fr) auto;
+      border-right: 1px solid #2b3439;
+      min-width: 0;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-hero {
+      position: relative;
+      min-height: 360px;
+      padding: 26px 24px 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-kicker {
+      margin: 0 0 8px;
+      color: #f4a137;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-hero h1 {
+      margin: 0;
+      max-width: 430px;
+      font-size: clamp(25px, 4vw, 43px);
+      line-height: 1.02;
+      font-weight: 500;
+      letter-spacing: -0.035em;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-hero h1 em {
+      color: #6be77f;
+      font-style: normal;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-preview {
+      position: relative;
+      margin-top: 24px;
+      padding-right: 10%;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-desktop-shot {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border: 1px solid #4a555b;
+      border-radius: 10px;
+      box-shadow: 0 16px 38px rgba(0, 0, 0, 0.55), 0 0 24px rgba(244, 151, 32, 0.08);
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-phone-shot {
+      position: absolute;
+      width: 27%;
+      max-height: 138%;
+      right: 0;
+      bottom: -17%;
+      object-fit: contain;
+      filter: drop-shadow(0 14px 16px rgba(0, 0, 0, 0.65));
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-downloads {
+      padding: 22px 24px 24px;
+      background: linear-gradient(180deg, rgba(16, 21, 24, 0.92), rgba(10, 13, 15, 0.98));
+      border-top: 1px solid #313a3f;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-section-label {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 13px;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-section-label h2,
+    #monitorfpv-landing-mockup .monitorfpv-copy h2 {
+      margin: 0;
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-section-label span {
+      color: #869097;
+      font-size: 11px;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-platforms {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 9px;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-platform {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      padding: 12px 13px;
+      color: #eef2f3;
+      background: #161b1e;
+      border: 1px solid #3b454b;
+      border-radius: 8px;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-platform:hover { border-color: #f09a2c; }
+
+    #monitorfpv-landing-mockup .monitorfpv-platform:focus-visible {
+      outline: 2px solid #f4a137;
+      outline-offset: 2px;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-platform.monitorfpv-ready {
+      background: linear-gradient(135deg, #19251c, #171c1f);
+      border-color: #4fbd64;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-platform svg {
+      flex: 0 0 auto;
+      width: 19px;
+      height: 19px;
+      color: #cbd3d7;
+      fill: none;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 1.8;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-ready svg { color: #6be77f; }
+
+    #monitorfpv-landing-mockup .monitorfpv-platform strong,
+    #monitorfpv-landing-mockup .monitorfpv-platform small {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-platform strong {
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-platform small {
+      margin-top: 2px;
+      color: #929ca1;
+      font-size: 10px;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-download-status {
+      min-height: 18px;
+      margin: 10px 0 0;
+      color: #8fdc9c;
+      font-size: 11px;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-copy {
+      padding: 28px 28px 34px;
+      background: rgba(11, 14, 16, 0.84);
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-copy section + section {
+      margin-top: 27px;
+      padding-top: 25px;
+      border-top: 1px solid #2d353a;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-copy p,
+    #monitorfpv-landing-mockup .monitorfpv-copy li {
+      color: #b9c1c5;
+      font-size: 12px;
+      line-height: 1.62;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-copy p { margin: 10px 0 0; }
+
+    #monitorfpv-landing-mockup .monitorfpv-copy ul {
+      margin: 11px 0 0;
+      padding-left: 19px;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-copy li + li { margin-top: 7px; }
+
+    #monitorfpv-landing-mockup .monitorfpv-copy strong { color: #eef2f3; font-weight: 500; }
+
+    #monitorfpv-landing-mockup .monitorfpv-steps {
+      display: grid;
+      gap: 9px;
+      margin-top: 13px;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-step {
+      display: grid;
+      grid-template-columns: 30px 1fr;
+      gap: 10px;
+      align-items: start;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-step-number {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      color: #f5a03a;
+      background: #1a1e20;
+      border: 1px solid #6e4b20;
+      border-radius: 50%;
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-step h3 {
+      margin: 1px 0 3px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-step p {
+      margin: 0;
+      color: #929ca1;
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-note {
+      margin-top: 17px;
+      padding-left: 12px;
+      color: #8fdc9c;
+      border-left: 2px solid #55ca69;
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    @media (max-width: 680px) {
+      body { padding: 0; }
+      #monitorfpv-landing-mockup { border-radius: 14px; }
+      #monitorfpv-landing-mockup .monitorfpv-topbar { padding: 12px 15px; }
+      #monitorfpv-landing-mockup .monitorfpv-slogan { display: none; }
+      #monitorfpv-landing-mockup .monitorfpv-layout { display: block; min-height: 0; }
+      #monitorfpv-landing-mockup .monitorfpv-left { display: block; border-right: 0; }
+      #monitorfpv-landing-mockup .monitorfpv-hero { min-height: 0; padding: 24px 17px 38px; }
+      #monitorfpv-landing-mockup .monitorfpv-preview { padding-right: 9%; margin-top: 20px; }
+      #monitorfpv-landing-mockup .monitorfpv-phone-shot { width: 29%; bottom: -20%; }
+      #monitorfpv-landing-mockup .monitorfpv-downloads { padding: 20px 17px; }
+      #monitorfpv-landing-mockup .monitorfpv-copy { padding: 25px 17px 30px; }
+      #monitorfpv-landing-mockup .monitorfpv-platforms { grid-template-columns: 1fr; }
+      #monitorfpv-landing-mockup .monitorfpv-section-label { align-items: flex-start; flex-direction: column; gap: 4px; }
+    }
+  </style>
+
+  <header class="monitorfpv-topbar">
+    <div class="monitorfpv-brand">
+      <img src="./monitorfpv-landing-page_files/icon-192.png" alt="MonitorFPV compass and map icon">
+      <div class="monitorfpv-name">Monitor<span>FPV</span></div>
+    </div>
+    <div class="monitorfpv-slogan">Plan online. Monitor locally. Fly prepared.</div>
+  </header>
+
+  <main class="monitorfpv-layout">
+    <div class="monitorfpv-left">
+      <section class="monitorfpv-hero" aria-labelledby="monitorfpv-main-title">
+        <p class="monitorfpv-kicker">Ground support for FPV operations</p>
+        <h1 id="monitorfpv-main-title">See the mission <em>beyond the goggles.</em></h1>
+        <div class="monitorfpv-preview">
+          <img class="monitorfpv-desktop-shot" src="./monitorfpv-landing-page_files/cockpit-layout-sample.png" alt="MonitorFPV desktop ground-station interface mockup">
+          <img class="monitorfpv-phone-shot" src="./monitorfpv-landing-page_files/01-flight-collapsed.png" alt="MonitorFPV mobile interface mockup">
+        </div>
+      </section>
+
+      <section class="monitorfpv-downloads" aria-labelledby="monitorfpv-download-heading">
+        <div class="monitorfpv-section-label">
+          <h2 id="monitorfpv-download-heading">Download MonitorFPV</h2>
+          <span>Choose your platform</span>
+        </div>
+        <div class="monitorfpv-platforms">
+          <button class="monitorfpv-platform monitorfpv-ready" type="button" data-platform="Windows">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg>
+            <span><strong>Windows</strong><small>First release</small></span>
+          </button>
+          <button class="monitorfpv-platform" type="button" data-platform="macOS">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="12" rx="2"></rect><path d="M2 20h20M7 20l1-4h8l1 4"></path></svg>
+            <span><strong>macOS</strong><small>Planned</small></span>
+          </button>
+          <button class="monitorfpv-platform" type="button" data-platform="Android">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"></rect><path d="M10 18h4"></path></svg>
+            <span><strong>Android</strong><small>Planned</small></span>
+          </button>
+          <button class="monitorfpv-platform" type="button" data-platform="iOS">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="13" height="18" rx="2"></rect><rect x="15" y="8" width="6" height="12" rx="1.5"></rect><path d="M8 17h3M17.5 17h1"></path></svg>
+            <span><strong>iOS</strong><small>Planned</small></span>
+          </button>
+        </div>
+        <p class="monitorfpv-download-status" aria-live="polite">Windows will be the first complete-operation release.</p>
+      </section>
+    </div>
+
+    <article class="monitorfpv-copy">
+      <section>
+        <p class="monitorfpv-kicker">Field awareness</p>
+        <h2>What is MonitorFPV?</h2>
+        <p>MonitorFPV receives telemetry from ExpressLRS-equipped drones and displays useful flight information on a computer or mobile device. It is intended for a ground-support operator assisting an FPV pilot in the field.</p>
+      </section>
+
+      <section>
+        <h2>Requirements</h2>
+        <ul>
+          <li>Drone with an ExpressLRS telemetry link, version 4.1 or newer.</li>
+          <li>Compatible transmitter or controller with ELRS Backpack 1.5.8 or newer.</li>
+          <li>Windows or macOS computer, or Android or iOS device, with Wi-Fi.</li>
+          <li>Internet during map preparation; prepared areas remain available offline.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Features</h2>
+        <ul>
+          <li>Save selected map areas for later use without internet.</li>
+          <li>Create mission plans or import existing INAV missions.</li>
+          <li>Monitor link quality, battery, location, speed, attitude and flight status.</li>
+          <li>Follow the mission route and waypoint progress from the ground.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Quick start</h2>
+        <div class="monitorfpv-steps">
+          <div class="monitorfpv-step"><span class="monitorfpv-step-number">1</span><div><h3>Install</h3><p>Download the correct version for your device.</p></div></div>
+          <div class="monitorfpv-step"><span class="monitorfpv-step-number">2</span><div><h3>Prepare</h3><p>Save the operating area and create or import a mission while online.</p></div></div>
+          <div class="monitorfpv-step"><span class="monitorfpv-step-number">3</span><div><h3>Connect</h3><p>Join the ExpressLRS Backpack Wi-Fi network and confirm telemetry.</p></div></div>
+          <div class="monitorfpv-step"><span class="monitorfpv-step-number">4</span><div><h3>Monitor</h3><p>Support the FPV pilot with map, telemetry and waypoint awareness.</p></div></div>
+        </div>
+        <div class="monitorfpv-note">Internet is useful for preparation, but live telemetry and saved mission data remain local.</div>
+      </section>
+    </article>
+  </main>
+
+  <script>
+    (() => {
+      const root = document.getElementById('monitorfpv-landing-mockup');
+      const status = root.querySelector('.monitorfpv-download-status');
+      root.querySelectorAll('.monitorfpv-platform').forEach((button) => {
+        button.addEventListener('click', () => {
+          const platform = button.dataset.platform;
+          status.textContent = platform === 'Windows'
+            ? 'Windows will be the first complete-operation release.'
+            : `${platform} is shown in the roadmap and is not available yet.`;
+        });
+      });
+    })();
+  </script>
+</div>
+</body></html>
