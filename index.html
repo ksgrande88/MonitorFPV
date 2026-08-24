@@ -359,6 +359,7 @@
       border: 1px solid #3b454b;
       border-radius: 8px;
       text-align: left;
+      text-decoration: none;
       cursor: pointer;
     }
 
@@ -372,6 +373,15 @@
     #monitorfpv-landing-mockup .monitorfpv-platform.monitorfpv-ready {
       background: linear-gradient(135deg, #19251c, #171c1f);
       border-color: #4fbd64;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-platform:disabled {
+      opacity: 0.58;
+      cursor: not-allowed;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-platform:disabled:hover {
+      border-color: #3b454b;
     }
 
     #monitorfpv-landing-mockup .monitorfpv-platform svg {
@@ -580,19 +590,19 @@
           <span data-i18n="choosePlatform">Choose your platform</span>
         </div>
         <div class="monitorfpv-platforms">
-          <button class="monitorfpv-platform monitorfpv-ready" type="button" data-platform="Windows">
+          <a class="monitorfpv-platform monitorfpv-ready" data-platform="Windows" href="https://github.com/ksgrande88/MonitorFPV/releases/download/v0.1.0-dev/MonitorFPV-0.1.0-dev-windows-x64.zip">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg>
             <span><strong>Windows</strong><small data-i18n="firstRelease">First release</small></span>
-          </button>
-          <button class="monitorfpv-platform" type="button" data-platform="macOS">
+          </a>
+          <button class="monitorfpv-platform" type="button" data-platform="macOS" disabled aria-disabled="true">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="12" rx="2"></rect><path d="M2 20h20M7 20l1-4h8l1 4"></path></svg>
             <span><strong>macOS</strong><small data-i18n="planned">Planned</small></span>
           </button>
-          <button class="monitorfpv-platform monitorfpv-ready" type="button" data-platform="Android">
+          <a class="monitorfpv-platform monitorfpv-ready" data-platform="Android" href="https://github.com/ksgrande88/MonitorFPV/releases/download/v0.1.0-dev/MonitorFPV-0.1.0-dev-android-debug.apk">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"></rect><path d="M10 18h4"></path></svg>
             <span><strong>Android</strong><small data-i18n="released">Released</small></span>
-          </button>
-          <button class="monitorfpv-platform" type="button" data-platform="iOS">
+          </a>
+          <button class="monitorfpv-platform" type="button" data-platform="iOS" disabled aria-disabled="true">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="13" height="18" rx="2"></rect><rect x="15" y="8" width="6" height="12" rx="1.5"></rect><path d="M8 17h3M17.5 17h1"></path></svg>
             <span><strong>iOS</strong><small data-i18n="planned">Planned</small></span>
           </button>
@@ -700,8 +710,8 @@
             localNote: 'Internet is useful for preparation, but live telemetry and saved mission data remain local.'
           },
           platformStatus: {
-            Windows: 'Windows is released for complete-operation testing.',
-            Android: 'Android is released for field testing.',
+            Windows: 'Starting the Windows ZIP download.',
+            Android: 'Starting the Android APK download.',
             macOS: 'macOS is on the roadmap and is not available yet.',
             iOS: 'iOS is on the roadmap and is not available yet.'
           }
@@ -753,8 +763,8 @@
             localNote: 'A internet é útil na preparação, mas a telemetria ao vivo e os dados salvos da missão permanecem locais.'
           },
           platformStatus: {
-            Windows: 'Windows está lançado para testes de operação completa.',
-            Android: 'Android está lançado para testes em campo.',
+            Windows: 'Iniciando o download do ZIP para Windows.',
+            Android: 'Iniciando o download do APK para Android.',
             macOS: 'macOS está no planejamento e ainda não está disponível.',
             iOS: 'iOS está no planejamento e ainda não está disponível.'
           }
@@ -806,8 +816,8 @@
             localNote: 'Інтернет корисний для підготовки, але жива телеметрія та збережені дані місії залишаються локальними.'
           },
           platformStatus: {
-            Windows: 'Версію для Windows випущено для повного операційного тестування.',
-            Android: 'Версію для Android випущено для польового тестування.',
+            Windows: 'Починається завантаження ZIP для Windows.',
+            Android: 'Починається завантаження APK для Android.',
             macOS: 'Версія для macOS є в планах і поки недоступна.',
             iOS: 'Версія для iOS є в планах і поки недоступна.'
           }
