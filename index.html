@@ -192,56 +192,15 @@
       border-radius: 50%;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
       pointer-events: none;
+      z-index: 1;
     }
 
-    #monitorfpv-landing-mockup .monitorfpv-flag--us {
-      background: repeating-linear-gradient(to bottom, #b22234 0 7.7%, #fff 7.7% 15.4%);
-    }
-
-    #monitorfpv-landing-mockup .monitorfpv-flag--us i {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 53%;
-      height: 54%;
-      background: #3c3b6e;
-    }
-
-    #monitorfpv-landing-mockup .monitorfpv-flag--us i::after {
-      content: "✦";
+    #monitorfpv-landing-mockup .monitorfpv-flag-art {
       position: absolute;
       inset: 0;
-      color: rgba(255, 255, 255, 0.92);
-      font-size: 7px;
-      line-height: 11px;
-      text-align: center;
-    }
-
-    #monitorfpv-landing-mockup .monitorfpv-flag--br { background: #009b3a; }
-
-    #monitorfpv-landing-mockup .monitorfpv-flag--br i {
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      width: 10px;
-      height: 10px;
-      background: #ffdf00;
-      transform: rotate(45deg);
-    }
-
-    #monitorfpv-landing-mockup .monitorfpv-flag--br i::before {
-      content: "";
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #002776;
-    }
-
-    #monitorfpv-landing-mockup .monitorfpv-flag--ua {
-      background: linear-gradient(to bottom, #0057b7 0 50%, #ffd700 50% 100%);
+      display: block;
+      width: 100%;
+      height: 100%;
     }
 
     #monitorfpv-landing-mockup .monitorfpv-layout {
@@ -541,6 +500,34 @@
     }
   </style>
 
+  <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute;overflow:hidden">
+    <defs>
+      <pattern id="monitorfpv-us-stripes" width="32" height="4.923" patternUnits="userSpaceOnUse">
+        <rect width="32" height="2.462" fill="#c62436"></rect>
+        <rect y="2.462" width="32" height="2.462" fill="#f4f1ea"></rect>
+      </pattern>
+      <pattern id="monitorfpv-us-stars" width="2.7" height="2.7" patternUnits="userSpaceOnUse">
+        <circle cx=".75" cy=".75" r=".48" fill="#fff"></circle>
+        <circle cx="2.1" cy="2.1" r=".42" fill="#fff"></circle>
+      </pattern>
+      <symbol id="monitorfpv-flag-us" viewBox="0 0 32 32">
+        <rect width="32" height="32" fill="url(#monitorfpv-us-stripes)"></rect>
+        <rect width="16.5" height="15.5" fill="#24468e"></rect>
+        <rect width="16.5" height="15.5" fill="url(#monitorfpv-us-stars)"></rect>
+      </symbol>
+      <symbol id="monitorfpv-flag-br" viewBox="0 0 32 32">
+        <rect width="32" height="32" fill="#159447"></rect>
+        <path d="M16 3 30 16 16 29 2 16Z" fill="#ffd42a"></path>
+        <circle cx="16" cy="16" r="7.4" fill="#164a96"></circle>
+        <path d="M9.6 14.2c4.8-1.4 10.1-.4 13.1 2.5" fill="none" stroke="#fff" stroke-width="1.35"></path>
+      </symbol>
+      <symbol id="monitorfpv-flag-ua" viewBox="0 0 32 32">
+        <rect width="32" height="16" fill="#0057b7"></rect>
+        <rect y="16" width="32" height="16" fill="#ffd700"></rect>
+      </symbol>
+    </defs>
+  </svg>
+
   <header class="monitorfpv-topbar">
     <div class="monitorfpv-brand">
       <img src="./monitorfpv-landing-page_files/icon-192.png" alt="MonitorFPV compass and map icon" data-i18n-alt="brandAlt">
@@ -549,22 +536,22 @@
     <div class="monitorfpv-topbar-actions">
       <div class="monitorfpv-language">
         <button class="monitorfpv-language-toggle" type="button" aria-haspopup="menu" aria-expanded="false" aria-label="Choose language" data-i18n-aria-label="chooseLanguage">
-          <span class="monitorfpv-flag monitorfpv-flag--us" aria-hidden="true"><i></i></span>
+          <span class="monitorfpv-flag monitorfpv-flag--us" aria-hidden="true"><svg class="monitorfpv-flag-art" viewBox="0 0 32 32"><use href="#monitorfpv-flag-us"></use></svg></span>
           <span class="monitorfpv-language-label monitorfpv-language-full">English (US)</span>
           <span class="monitorfpv-language-label monitorfpv-language-short">EN</span>
           <span class="monitorfpv-language-chevron" aria-hidden="true"></span>
         </button>
         <div class="monitorfpv-language-menu" role="menu" hidden>
           <button class="monitorfpv-language-option" type="button" role="menuitemradio" aria-checked="true" data-language="en-US">
-            <span class="monitorfpv-flag monitorfpv-flag--us" aria-hidden="true"><i></i></span>
+            <span class="monitorfpv-flag monitorfpv-flag--us" aria-hidden="true"><svg class="monitorfpv-flag-art" viewBox="0 0 32 32"><use href="#monitorfpv-flag-us"></use></svg></span>
             <span>English (US)</span>
           </button>
           <button class="monitorfpv-language-option" type="button" role="menuitemradio" aria-checked="false" data-language="pt-BR">
-            <span class="monitorfpv-flag monitorfpv-flag--br" aria-hidden="true"><i></i></span>
+            <span class="monitorfpv-flag monitorfpv-flag--br" aria-hidden="true"><svg class="monitorfpv-flag-art" viewBox="0 0 32 32"><use href="#monitorfpv-flag-br"></use></svg></span>
             <span>Português (BR)</span>
           </button>
           <button class="monitorfpv-language-option" type="button" role="menuitemradio" aria-checked="false" data-language="uk-UA">
-            <span class="monitorfpv-flag monitorfpv-flag--ua" aria-hidden="true"><i></i></span>
+            <span class="monitorfpv-flag monitorfpv-flag--ua" aria-hidden="true"><svg class="monitorfpv-flag-art" viewBox="0 0 32 32"><use href="#monitorfpv-flag-ua"></use></svg></span>
             <span>Українська (UA)</span>
           </button>
         </div>
@@ -856,6 +843,7 @@
         document.title = language.title;
         document.querySelector('meta[name="description"]').content = language.description;
         currentFlag.className = `monitorfpv-flag monitorfpv-flag--${language.flag}`;
+        currentFlag.querySelector('use')?.setAttribute('href', `#monitorfpv-flag-${language.flag}`);
         currentFullLabel.textContent = language.label;
         currentShortLabel.textContent = language.short;
         root.querySelectorAll('.monitorfpv-language-option').forEach((option) => {
