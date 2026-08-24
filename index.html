@@ -482,6 +482,25 @@
       line-height: 1.45;
     }
 
+    #monitorfpv-landing-mockup .monitorfpv-step a {
+      display: inline-block;
+      margin-top: 3px;
+      color: #75df87;
+      text-decoration-color: rgba(117, 223, 135, 0.48);
+      text-underline-offset: 2px;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-step a:hover {
+      color: #f4a137;
+      text-decoration-color: currentColor;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-step a:focus-visible {
+      outline: 2px solid #f4a137;
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
     #monitorfpv-landing-mockup .monitorfpv-note {
       margin-top: 17px;
       padding-left: 12px;
@@ -614,7 +633,7 @@
         <div class="monitorfpv-steps">
           <div class="monitorfpv-step"><span class="monitorfpv-step-number">1</span><div><h3 data-i18n="step1Heading">Install</h3><p data-i18n="step1Text">Download the correct version for your device.</p></div></div>
           <div class="monitorfpv-step"><span class="monitorfpv-step-number">2</span><div><h3 data-i18n="step2Heading">Prepare</h3><p data-i18n="step2Text">Save the operating area and create or import a mission while online.</p></div></div>
-          <div class="monitorfpv-step"><span class="monitorfpv-step-number">3</span><div><h3 data-i18n="step3Heading">Connect</h3><p data-i18n="step3Text">Join the ExpressLRS Backpack Wi-Fi network and confirm telemetry.</p></div></div>
+          <div class="monitorfpv-step"><span class="monitorfpv-step-number">3</span><div><h3 data-i18n="step3Heading">Connect</h3><p><span data-i18n="step3Text">Join the ExpressLRS Backpack Wi-Fi network and confirm telemetry.</span><br><a href="https://www.expresslrs.org/hardware/backpack/backpack-tx-setup/" target="_blank" rel="noopener noreferrer" data-i18n="backpackLink">See official Backpack site</a></p></div></div>
           <div class="monitorfpv-step"><span class="monitorfpv-step-number">4</span><div><h3 data-i18n="step4Heading">Monitor</h3><p data-i18n="step4Text">Support the FPV pilot with map, telemetry and waypoint awareness.</p></div></div>
         </div>
         <div class="monitorfpv-note" data-i18n="localNote">Internet is useful for preparation, but live telemetry and saved mission data remain local.</div>
@@ -675,6 +694,7 @@
             step2Text: 'Save the operating area and create or import a mission while online.',
             step3Heading: 'Connect',
             step3Text: 'Join the ExpressLRS Backpack Wi-Fi network and confirm telemetry.',
+            backpackLink: 'See official Backpack site',
             step4Heading: 'Monitor',
             step4Text: 'Support the FPV pilot with map, telemetry and waypoint awareness.',
             localNote: 'Internet is useful for preparation, but live telemetry and saved mission data remain local.'
@@ -727,6 +747,7 @@
             step2Text: 'Salve a área de operação e crie ou importe uma missão enquanto estiver online.',
             step3Heading: 'Conecte',
             step3Text: 'Entre na rede Wi-Fi do ExpressLRS Backpack e confirme a telemetria.',
+            backpackLink: 'Ver site oficial do Backpack',
             step4Heading: 'Monitore',
             step4Text: 'Apoie o piloto FPV acompanhando mapa, telemetria e waypoints.',
             localNote: 'A internet é útil na preparação, mas a telemetria ao vivo e os dados salvos da missão permanecem locais.'
@@ -779,6 +800,7 @@
             step2Text: 'Збережіть район роботи та створіть або імпортуйте місію, поки є інтернет.',
             step3Heading: 'Підключіться',
             step3Text: 'Приєднайтеся до мережі Wi-Fi ExpressLRS Backpack і перевірте телеметрію.',
+            backpackLink: 'Переглянути офіційний сайт Backpack',
             step4Heading: 'Контролюйте',
             step4Text: 'Допомагайте FPV-пілоту, відстежуючи мапу, телеметрію та маршрутні точки.',
             localNote: 'Інтернет корисний для підготовки, але жива телеметрія та збережені дані місії залишаються локальними.'
