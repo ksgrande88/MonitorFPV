@@ -206,17 +206,24 @@
     #monitorfpv-landing-mockup .monitorfpv-layout {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      grid-template-areas:
+        "hero about"
+        "hero requirements"
+        "downloads connection"
+        "features connection"
+        "quick faq"
+        "tutorials tutorials";
+      gap: 1px;
       min-height: 700px;
+      background: #2b3439;
     }
 
     #monitorfpv-landing-mockup .monitorfpv-left {
-      display: grid;
-      grid-template-rows: minmax(0, 1fr) auto;
-      border-right: 1px solid #2b3439;
-      min-width: 0;
+      display: contents;
     }
 
     #monitorfpv-landing-mockup .monitorfpv-hero {
+      grid-area: hero;
       position: relative;
       min-height: 360px;
       padding: 26px 24px 34px;
@@ -224,6 +231,9 @@
       flex-direction: column;
       justify-content: center;
       overflow: hidden;
+      background:
+        radial-gradient(circle at 18% 12%, rgba(75, 224, 94, 0.11), transparent 30%),
+        #080b0d;
     }
 
     #monitorfpv-landing-mockup .monitorfpv-kicker {
@@ -267,18 +277,18 @@
 
     #monitorfpv-landing-mockup .monitorfpv-phone-shot {
       position: absolute;
-      width: 27%;
-      max-height: 138%;
-      right: 0;
-      bottom: -17%;
+      width: 25%;
+      max-height: 118%;
+      right: 1.5%;
+      bottom: -4%;
       object-fit: contain;
       filter: drop-shadow(0 14px 16px rgba(0, 0, 0, 0.65));
     }
 
     #monitorfpv-landing-mockup .monitorfpv-downloads {
+      grid-area: downloads;
       padding: 22px 24px 24px;
       background: linear-gradient(180deg, rgba(16, 21, 24, 0.92), rgba(10, 13, 15, 0.98));
-      border-top: 1px solid #313a3f;
     }
 
     #monitorfpv-landing-mockup .monitorfpv-section-label {
@@ -384,15 +394,22 @@
     }
 
     #monitorfpv-landing-mockup .monitorfpv-copy {
-      padding: 28px 28px 34px;
-      background: rgba(11, 14, 16, 0.84);
+      display: contents;
     }
 
-    #monitorfpv-landing-mockup .monitorfpv-copy section + section {
-      margin-top: 27px;
-      padding-top: 25px;
-      border-top: 1px solid #2d353a;
+    #monitorfpv-landing-mockup .monitorfpv-copy-section {
+      min-width: 0;
+      padding: 26px 28px;
+      background: rgba(11, 14, 16, 0.96);
     }
+
+    #monitorfpv-landing-mockup .monitorfpv-about { grid-area: about; }
+    #monitorfpv-landing-mockup .monitorfpv-requirements { grid-area: requirements; }
+    #monitorfpv-landing-mockup .monitorfpv-connection { grid-area: connection; }
+    #monitorfpv-landing-mockup .monitorfpv-features { grid-area: features; }
+    #monitorfpv-landing-mockup .monitorfpv-quick-start { grid-area: quick; }
+    #monitorfpv-landing-mockup .monitorfpv-tutorials { grid-area: tutorials; }
+    #monitorfpv-landing-mockup .monitorfpv-faq-section { grid-area: faq; }
 
     #monitorfpv-landing-mockup .monitorfpv-copy p,
     #monitorfpv-landing-mockup .monitorfpv-copy li {
@@ -479,7 +496,318 @@
       line-height: 1.45;
     }
 
-    @media (max-width: 680px) {
+    #monitorfpv-landing-mockup .monitorfpv-receive-only {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 11px;
+      margin-top: 15px;
+      padding: 13px 14px;
+      border: 1px solid rgba(85, 202, 105, 0.45);
+      border-left: 3px solid #55ca69;
+      border-radius: 9px;
+      background: linear-gradient(105deg, rgba(85, 202, 105, 0.12), rgba(18, 23, 26, 0.78));
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-receive-only svg {
+      width: 27px;
+      height: 27px;
+      fill: none;
+      stroke: #75df87;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-receive-only strong {
+      display: block;
+      color: #dff4e2;
+      font-size: 12px;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-receive-only p {
+      margin: 4px 0 0;
+      color: #aebdb1;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-connect-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 13px;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-connect-item {
+      display: grid;
+      grid-template-columns: 23px 1fr;
+      gap: 8px;
+      padding: 10px;
+      border: 1px solid #30383d;
+      border-radius: 9px;
+      background: rgba(20, 25, 28, 0.82);
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-connect-item > span {
+      width: 21px;
+      height: 21px;
+      display: grid;
+      place-items: center;
+      color: #071009;
+      background: #55ca69;
+      border-radius: 50%;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-connect-item h3 {
+      margin: 1px 0 3px;
+      color: #eef2f3;
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-connect-item p {
+      margin: 0;
+      color: #929ca1;
+      font-size: 10px;
+      line-height: 1.48;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-tutorial-group + .monitorfpv-tutorial-group {
+      margin-top: 19px;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-tutorial-group h3 {
+      margin: 13px 0 8px;
+      color: #eef2f3;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-tutorial-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-tutorial-gallery figure {
+      min-width: 0;
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid #30383d;
+      border-radius: 9px;
+      background: #0c1012;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-tutorial-gallery a {
+      display: block;
+      overflow: hidden;
+      border-bottom: 1px solid #30383d;
+      background: #060809;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-tutorial-gallery a:focus-visible {
+      outline: 2px solid #f4a137;
+      outline-offset: -2px;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-tutorial-gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 160ms ease, filter 160ms ease;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-tutorial-gallery a:hover img {
+      transform: scale(1.015);
+      filter: brightness(1.06);
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-tutorial-gallery figcaption {
+      padding: 9px 10px 11px;
+      color: #aeb7bc;
+      font-size: 10px;
+      line-height: 1.5;
+    }
+
+    body.monitorfpv-lightbox-open {
+      overflow: hidden;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-lightbox[hidden] {
+      display: none;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-lightbox {
+      position: fixed;
+      z-index: 1000;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: rgba(1, 3, 4, 0.9);
+      backdrop-filter: blur(5px);
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-lightbox-dialog {
+      position: relative;
+      width: min(1400px, 96vw);
+      max-height: 94vh;
+      display: grid;
+      grid-template-rows: minmax(0, 1fr) auto;
+      overflow: hidden;
+      border: 1px solid #4a555b;
+      border-radius: 14px;
+      outline: none;
+      background: #080b0d;
+      box-shadow: 0 26px 90px rgba(0, 0, 0, 0.82), 0 0 34px rgba(244, 151, 32, 0.11);
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-lightbox-media {
+      min-height: 240px;
+      max-height: calc(94vh - 118px);
+      display: grid;
+      place-items: center;
+      overflow: auto;
+      padding: 44px 70px 14px;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(52, 63, 69, 0.2), transparent 60%),
+        #030506;
+      scrollbar-color: #a96720 #111619;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-lightbox-image {
+      display: block;
+      max-width: 100%;
+      max-height: calc(94vh - 176px);
+      object-fit: contain;
+      cursor: zoom-in;
+      transition: width 180ms ease, max-height 180ms ease;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-lightbox-media.is-zoomed {
+      display: block;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-lightbox-media.is-zoomed .monitorfpv-lightbox-image {
+      width: 160%;
+      max-width: none;
+      max-height: none;
+      margin: 0 auto;
+      cursor: zoom-out;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-lightbox-toolbar {
+      position: absolute;
+      z-index: 2;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      gap: 7px;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-lightbox-toolbar button,
+    #monitorfpv-landing-mockup .monitorfpv-lightbox-nav {
+      display: grid;
+      place-items: center;
+      color: #eef2f3;
+      background: rgba(13, 17, 20, 0.94);
+      border: 1px solid #59646a;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+      cursor: pointer;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-lightbox-toolbar button {
+      width: 38px;
+      height: 38px;
+      padding: 0;
+      border-radius: 50%;
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-lightbox-toolbar button:hover,
+    #monitorfpv-landing-mockup .monitorfpv-lightbox-nav:hover,
+    #monitorfpv-landing-mockup .monitorfpv-lightbox-toolbar button:focus-visible,
+    #monitorfpv-landing-mockup .monitorfpv-lightbox-nav:focus-visible {
+      color: #f4a137;
+      border-color: #f4a137;
+      outline: none;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-lightbox-nav {
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      width: 46px;
+      height: 62px;
+      padding: 0;
+      border-radius: 9px;
+      transform: translateY(-50%);
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-lightbox-prev { left: 12px; }
+    #monitorfpv-landing-mockup .monitorfpv-lightbox-next { right: 12px; }
+
+    #monitorfpv-landing-mockup .monitorfpv-lightbox-copy {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 14px;
+      align-items: start;
+      min-height: 92px;
+      padding: 15px 18px 17px;
+      border-top: 1px solid #30383d;
+      background: linear-gradient(180deg, #151a1d, #0b0f11);
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-lightbox-count {
+      min-width: 46px;
+      padding: 4px 7px;
+      color: #f4a137;
+      border: 1px solid #6e4b20;
+      border-radius: 12px;
+      font-size: 10px;
+      text-align: center;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-lightbox-caption {
+      margin: 0;
+      color: #c6ced2;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-faq {
+      display: grid;
+      gap: 7px;
+      margin-top: 12px;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-faq details {
+      padding: 10px 11px;
+      border: 1px solid #30383d;
+      border-radius: 8px;
+      background: rgba(20, 25, 28, 0.82);
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-faq summary {
+      color: #eef2f3;
+      font-size: 11px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-faq details p {
+      margin-top: 7px;
+      color: #9ea8ad;
+      font-size: 10px;
+      line-height: 1.52;
+    }
+
+    @media (max-width: 900px) {
       body { padding: 0; }
       #monitorfpv-landing-mockup { border-radius: 14px; }
       #monitorfpv-landing-mockup .monitorfpv-topbar { padding: 12px 15px; }
@@ -488,15 +816,37 @@
       #monitorfpv-landing-mockup .monitorfpv-language-full { display: none; }
       #monitorfpv-landing-mockup .monitorfpv-language-short { display: inline; }
       #monitorfpv-landing-mockup .monitorfpv-language-toggle { min-height: 36px; padding-right: 9px; }
-      #monitorfpv-landing-mockup .monitorfpv-layout { display: block; min-height: 0; }
-      #monitorfpv-landing-mockup .monitorfpv-left { display: block; border-right: 0; }
+      #monitorfpv-landing-mockup .monitorfpv-layout { display: block; min-height: 0; background: transparent; }
+      #monitorfpv-landing-mockup .monitorfpv-left,
+      #monitorfpv-landing-mockup .monitorfpv-copy { display: block; }
       #monitorfpv-landing-mockup .monitorfpv-hero { min-height: 0; padding: 24px 17px 38px; }
       #monitorfpv-landing-mockup .monitorfpv-preview { padding-right: 9%; margin-top: 20px; }
-      #monitorfpv-landing-mockup .monitorfpv-phone-shot { width: 29%; bottom: -20%; }
+      #monitorfpv-landing-mockup .monitorfpv-phone-shot { width: 27%; right: 2%; bottom: -6%; }
       #monitorfpv-landing-mockup .monitorfpv-downloads { padding: 20px 17px; }
-      #monitorfpv-landing-mockup .monitorfpv-copy { padding: 25px 17px 30px; }
+      #monitorfpv-landing-mockup .monitorfpv-copy-section {
+        padding: 25px 17px;
+        border-top: 1px solid #2d353a;
+      }
       #monitorfpv-landing-mockup .monitorfpv-platforms { grid-template-columns: 1fr; }
       #monitorfpv-landing-mockup .monitorfpv-section-label { align-items: flex-start; flex-direction: column; gap: 4px; }
+      #monitorfpv-landing-mockup .monitorfpv-connect-list,
+      #monitorfpv-landing-mockup .monitorfpv-tutorial-gallery { grid-template-columns: 1fr; }
+      #monitorfpv-landing-mockup .monitorfpv-lightbox { padding: 8px; }
+      #monitorfpv-landing-mockup .monitorfpv-lightbox-dialog { width: 100%; max-height: calc(100dvh - 16px); }
+      #monitorfpv-landing-mockup .monitorfpv-lightbox-media {
+        min-height: 180px;
+        max-height: calc(100dvh - 152px);
+        padding: 50px 48px 10px;
+      }
+      #monitorfpv-landing-mockup .monitorfpv-lightbox-image { max-height: calc(100dvh - 215px); }
+      #monitorfpv-landing-mockup .monitorfpv-lightbox-nav { width: 38px; height: 54px; }
+      #monitorfpv-landing-mockup .monitorfpv-lightbox-prev { left: 5px; }
+      #monitorfpv-landing-mockup .monitorfpv-lightbox-next { right: 5px; }
+      #monitorfpv-landing-mockup .monitorfpv-lightbox-copy {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 12px 14px max(14px, env(safe-area-inset-bottom, 0px));
+      }
     }
   </style>
 
@@ -577,7 +927,7 @@
           <span data-i18n="choosePlatform">Choose your platform</span>
         </div>
         <div class="monitorfpv-platforms">
-          <a class="monitorfpv-platform monitorfpv-ready" data-platform="Windows" href="https://github.com/ksgrande88/MonitorFPV/releases/download/v0.1.0-dev/MonitorFPV-0.1.0-dev-windows-x64.zip">
+          <a class="monitorfpv-platform monitorfpv-ready" data-platform="Windows" href="https://github.com/ksgrande88/MonitorFPV/releases/download/v0.1.1-dev/MonitorFPV-0.1.1-dev-windows-x64.zip">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg>
             <span><strong>Windows</strong><small data-i18n="firstRelease">First release</small></span>
           </a>
@@ -585,7 +935,7 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="12" rx="2"></rect><path d="M2 20h20M7 20l1-4h8l1 4"></path></svg>
             <span><strong>macOS</strong><small data-i18n="planned">Planned</small></span>
           </button>
-          <a class="monitorfpv-platform monitorfpv-ready" data-platform="Android" href="https://github.com/ksgrande88/MonitorFPV/releases/download/v0.1.0-dev/MonitorFPV-0.1.0-dev-android-debug.apk">
+          <a class="monitorfpv-platform monitorfpv-ready" data-platform="Android" href="https://github.com/ksgrande88/MonitorFPV/releases/download/v0.1.1-dev/MonitorFPV-0.1.1-dev-android-debug.apk">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"></rect><path d="M10 18h4"></path></svg>
             <span><strong>Android</strong><small data-i18n="released">Released</small></span>
           </a>
@@ -599,13 +949,21 @@
     </div>
 
     <article class="monitorfpv-copy">
-      <section>
+      <section class="monitorfpv-copy-section monitorfpv-about">
         <p class="monitorfpv-kicker" data-i18n="fieldAwareness">Field awareness</p>
         <h2 data-i18n="whatHeading">What is MonitorFPV?</h2>
         <p data-i18n="whatText">MonitorFPV receives telemetry from ExpressLRS-equipped drones and displays useful flight information on a computer or mobile device. It is intended for a ground-support operator assisting an FPV pilot in the field.</p>
+        <div class="monitorfpv-receive-only">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V10M8 21h8M9.5 10 12 5l2.5 5"></path><path d="M7 4a7 7 0 0 0 0 10M17 4a7 7 0 0 1 0 10"></path></svg>
+          <div>
+            <strong data-i18n="receiveOnlyTitle">MonitorFPV is receive-only</strong>
+            <p data-i18n="receiveOnlyText">It listens to telemetry from the transmitter's ExpressLRS Wi-Fi Backpack and never sends commands or data back to the drone.</p>
+            <p data-i18n="receiveOnlyWhy">Bidirectional MAVLink is a different workflow. MonitorFPV deliberately stays with CRSF telemetry downlink to avoid trading radio-link range and latency for uplink capability.</p>
+          </div>
+        </div>
       </section>
 
-      <section>
+      <section class="monitorfpv-copy-section monitorfpv-requirements">
         <h2 data-i18n="requirementsHeading">Requirements</h2>
         <ul>
           <li data-i18n="requirement1">Drone with an ExpressLRS telemetry link, version 4.1 or newer.</li>
@@ -615,7 +973,19 @@
         </ul>
       </section>
 
-      <section>
+      <section class="monitorfpv-copy-section monitorfpv-connection">
+        <h2 data-i18n="connectionHeading">Connect the transmitter</h2>
+        <p data-i18n="connectionIntro">The normal setup does not require a MonitorFPV-specific change on an ELRS-equipped drone.</p>
+        <div class="monitorfpv-connect-list">
+          <div class="monitorfpv-connect-item"><span>1</span><div><h3 data-i18n="connect1Heading">Keep the drone setup</h3><p data-i18n="connect1Text">If ELRS telemetry already reaches the transmitter, nothing extra is needed on the aircraft.</p></div></div>
+          <div class="monitorfpv-connect-item"><span>2</span><div><h3 data-i18n="connect2Heading">Enable Backpack telemetry</h3><p data-i18n="connect2Text">Use Backpack 1.5.8+. In the ExpressLRS Lua script open Backpack → Telemetry → WiFi and keep CRSF output.</p></div></div>
+          <div class="monitorfpv-connect-item"><span>3</span><div><h3 data-i18n="connect3Heading">Use 2.4 GHz Wi-Fi</h3><p data-i18n="connect3Text">The Backpack cannot join a 5 GHz-only Wi-Fi network. This is unrelated to 5G mobile service.</p></div></div>
+          <div class="monitorfpv-connect-item"><span>4</span><div><h3 data-i18n="connect4Heading">Optional home network</h3><p data-i18n="connect4Text">During flashing, save a 2.4 GHz home or hotspot SSID and password for automatic bench-test connection.</p></div></div>
+          <div class="monitorfpv-connect-item"><span>5</span><div><h3 data-i18n="connect5Heading">Fallback Backpack network</h3><p data-i18n="connect5Text">After about one minute it can create “Backpack ELRS XXXXXX”. Join it with password “expresslrs”. Both devices must share the same Wi-Fi.</p></div></div>
+        </div>
+      </section>
+
+      <section class="monitorfpv-copy-section monitorfpv-features">
         <h2 data-i18n="featuresHeading">Features</h2>
         <ul>
           <li data-i18n="feature1">Save selected map areas for later use without internet.</li>
@@ -625,7 +995,7 @@
         </ul>
       </section>
 
-      <section>
+      <section class="monitorfpv-copy-section monitorfpv-quick-start">
         <h2 data-i18n="quickStartHeading">Quick start</h2>
         <div class="monitorfpv-steps">
           <div class="monitorfpv-step"><span class="monitorfpv-step-number">1</span><div><h3 data-i18n="step1Heading">Install</h3><p data-i18n="step1Text">Download the correct version for your device.</p></div></div>
@@ -635,8 +1005,76 @@
         </div>
         <div class="monitorfpv-note" data-i18n="localNote">Internet is useful for preparation, but live telemetry and saved mission data remain local.</div>
       </section>
+
+      <section class="monitorfpv-copy-section monitorfpv-tutorials">
+        <h2 data-i18n="tutorialsHeading">Picture tutorials</h2>
+        <p data-i18n="tutorialsIntro">Select any image to inspect it at full size.</p>
+        <div class="monitorfpv-tutorial-group">
+          <h3 data-i18n="mapTutorialHeading">Save a map for offline use</h3>
+          <div class="monitorfpv-tutorial-gallery">
+            <figure>
+              <a href="./monitorfpv-landing-page_files/tutorials/map-tutorial-1.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/map-tutorial-1.png" alt="Map tutorial 1: selecting an offline map area" data-i18n-alt="mapTutorial1Alt" loading="lazy"></a>
+              <figcaption data-i18n="mapTutorial1Caption">Open Map Layers and select the area you want available without internet. Before drawing, zoom into every important part: the highest detail you actually viewed is the detail saved in the download.</figcaption>
+            </figure>
+            <figure>
+              <a href="./monitorfpv-landing-page_files/tutorials/map-tutorial-2.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/map-tutorial-2.png" alt="Map tutorial 2: naming and downloading a map area" data-i18n-alt="mapTutorial2Alt" loading="lazy"></a>
+              <figcaption data-i18n="mapTutorial2Caption">After drawing the area, choose a short name without spaces, then select Download.</figcaption>
+            </figure>
+            <figure>
+              <a href="./monitorfpv-landing-page_files/tutorials/map-tutorial-3.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/map-tutorial-3.png" alt="Map tutorial 3: adding a downloaded map file" data-i18n-alt="mapTutorial3Alt" loading="lazy"></a>
+              <figcaption data-i18n="mapTutorial3Caption">If the downloaded area does not appear under Saved Areas, select Add file and choose either downloaded file. MonitorFPV loads the matching pair automatically.</figcaption>
+            </figure>
+            <figure>
+              <a href="./monitorfpv-landing-page_files/tutorials/map-tutorial-4.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/map-tutorial-4.png" alt="Map tutorial 4: verifying a saved offline area" data-i18n-alt="mapTutorial4Alt" loading="lazy"></a>
+              <figcaption data-i18n="mapTutorial4Caption">A loaded saved area is visibly highlighted against the online background. Verify it before leaving for a location without internet.</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="monitorfpv-tutorial-group">
+          <h3 data-i18n="missionTutorialHeading">Plan and save a mission</h3>
+          <div class="monitorfpv-tutorial-gallery">
+            <figure>
+              <a href="./monitorfpv-landing-page_files/tutorials/plan-tutorial-1.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/plan-tutorial-1.png" alt="Mission tutorial 1: mission point types and route" data-i18n-alt="missionTutorial1Alt" loading="lazy"></a>
+              <figcaption data-i18n="missionTutorial1Caption">Mission Plan creates the route followed by the center steering gauge. Departure is reached within 500 m; waypoints, objectives and landing are reached within 100 m. Interest points mark references without joining the route. Emergency zones mark areas chosen in advance for a possible emergency or hard landing.</figcaption>
+            </figure>
+            <figure>
+              <a href="./monitorfpv-landing-page_files/tutorials/plan-tutorial-2.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/plan-tutorial-2.png" alt="Mission tutorial 2: editing, saving, and loading a mission" data-i18n-alt="missionTutorial2Alt" loading="lazy"></a>
+              <figcaption data-i18n="missionTutorial2Caption">Undo and Clear edit the plan. Saving and loading follow the same file workflow as Map Layers, and a mission can be attached to a saved map. Load Mission is at the bottom. Verify both map and mission before going offline.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="monitorfpv-copy-section monitorfpv-faq-section">
+        <h2 data-i18n="faqHeading">Frequently asked questions</h2>
+        <div class="monitorfpv-faq">
+          <details><summary data-i18n="faqReceiveQuestion">Can MonitorFPV control the drone?</summary><p data-i18n="faqReceiveAnswer">No. It only receives CRSF telemetry and has no command uplink to the aircraft.</p></details>
+          <details><summary data-i18n="faqDroneQuestion">Do I need to change the drone?</summary><p data-i18n="faqDroneAnswer">Not if it already uses ExpressLRS and sends telemetry to the transmitter. The additional setup is compatible Backpack firmware and Wi-Fi telemetry enabled on the transmitter.</p></details>
+          <details><summary data-i18n="faqWifiQuestion">Does 5 GHz Wi-Fi work?</summary><p data-i18n="faqWifiAnswer">No. Use a 2.4 GHz Wi-Fi network. “5 GHz Wi-Fi” and “5G mobile service” are different technologies.</p></details>
+          <details><summary data-i18n="faqNetworkQuestion">Which Wi-Fi network should I join?</summary><p data-i18n="faqNetworkAnswer">Use the 2.4 GHz home or hotspot network saved in the Backpack, or “Backpack ELRS XXXXXX” with password “expresslrs”.</p></details>
+          <details><summary data-i18n="faqOfflineQuestion">Does MonitorFPV work without internet?</summary><p data-i18n="faqOfflineAnswer">Yes for telemetry and previously saved maps and missions. Internet is needed to prepare new online map areas.</p></details>
+        </div>
+      </section>
     </article>
   </main>
+
+  <div class="monitorfpv-lightbox" role="dialog" aria-modal="true" aria-label="Tutorial image viewer" data-i18n-aria-label="tutorialViewer" hidden>
+    <div class="monitorfpv-lightbox-dialog" tabindex="-1">
+      <div class="monitorfpv-lightbox-toolbar">
+        <button class="monitorfpv-lightbox-zoom" type="button" aria-label="Zoom in" data-i18n-aria-label="zoomIn">+</button>
+        <button class="monitorfpv-lightbox-close" type="button" aria-label="Close tutorial" data-i18n-aria-label="closeTutorial">×</button>
+      </div>
+      <button class="monitorfpv-lightbox-nav monitorfpv-lightbox-prev" type="button" aria-label="Previous image" data-i18n-aria-label="previousTutorial">‹</button>
+      <div class="monitorfpv-lightbox-media">
+        <img class="monitorfpv-lightbox-image" alt="">
+      </div>
+      <button class="monitorfpv-lightbox-nav monitorfpv-lightbox-next" type="button" aria-label="Next image" data-i18n-aria-label="nextTutorial">›</button>
+      <div class="monitorfpv-lightbox-copy">
+        <span class="monitorfpv-lightbox-count" aria-live="polite"></span>
+        <p class="monitorfpv-lightbox-caption"></p>
+      </div>
+    </div>
+  </div>
 
   <script>
     (() => {
@@ -648,6 +1086,17 @@
       const currentFlag = languageToggle.querySelector('.monitorfpv-flag');
       const currentFullLabel = languageToggle.querySelector('.monitorfpv-language-full');
       const currentShortLabel = languageToggle.querySelector('.monitorfpv-language-short');
+      const tutorialFigures = Array.from(root.querySelectorAll('.monitorfpv-tutorial-gallery figure'));
+      const tutorialLightbox = root.querySelector('.monitorfpv-lightbox');
+      const tutorialDialog = root.querySelector('.monitorfpv-lightbox-dialog');
+      const tutorialMedia = root.querySelector('.monitorfpv-lightbox-media');
+      const tutorialImage = root.querySelector('.monitorfpv-lightbox-image');
+      const tutorialCaption = root.querySelector('.monitorfpv-lightbox-caption');
+      const tutorialCount = root.querySelector('.monitorfpv-lightbox-count');
+      const tutorialPrevious = root.querySelector('.monitorfpv-lightbox-prev');
+      const tutorialNext = root.querySelector('.monitorfpv-lightbox-next');
+      const tutorialZoom = root.querySelector('.monitorfpv-lightbox-zoom');
+      const tutorialClose = root.querySelector('.monitorfpv-lightbox-close');
 
       const languages = {
         'en-US': {
@@ -811,7 +1260,205 @@
         }
       };
 
+      const onboardingText = {
+        'en-US': {
+          receiveOnlyTitle: 'MonitorFPV is receive-only',
+          receiveOnlyText: "It listens to telemetry from the transmitter's ExpressLRS Wi-Fi Backpack and never sends commands or data back to the drone.",
+          receiveOnlyWhy: 'Bidirectional MAVLink is a different workflow. MonitorFPV deliberately stays with CRSF telemetry downlink to avoid trading radio-link range and latency for uplink capability.',
+          connectionHeading: 'Connect the transmitter',
+          connectionIntro: 'The normal setup does not require a MonitorFPV-specific change on an ELRS-equipped drone.',
+          connect1Heading: 'Keep the drone setup',
+          connect1Text: 'If ELRS telemetry already reaches the transmitter, nothing extra is needed on the aircraft.',
+          connect2Heading: 'Enable Backpack telemetry',
+          connect2Text: 'Use Backpack 1.5.8+. In the ExpressLRS Lua script open Backpack → Telemetry → WiFi and keep CRSF output.',
+          connect3Heading: 'Use 2.4 GHz Wi-Fi',
+          connect3Text: 'The Backpack cannot join a 5 GHz-only Wi-Fi network. This is unrelated to 5G mobile service.',
+          connect4Heading: 'Optional home network',
+          connect4Text: 'During flashing, save a 2.4 GHz home or hotspot SSID and password for automatic bench-test connection.',
+          connect5Heading: 'Fallback Backpack network',
+          connect5Text: 'After about one minute it can create “Backpack ELRS XXXXXX”. Join it with password “expresslrs”. Both devices must share the same Wi-Fi.',
+          tutorialsHeading: 'Picture tutorials',
+          tutorialsIntro: 'Select any image to inspect it at full size.',
+          openImage: 'Open image at full size',
+          mapTutorialHeading: 'Save a map for offline use',
+          mapTutorial1Alt: 'Map tutorial 1: selecting an offline map area',
+          mapTutorial1Caption: 'Open Map Layers and select the area you want available without internet. Before drawing, zoom into every important part: the highest detail you actually viewed is the detail saved in the download.',
+          mapTutorial2Alt: 'Map tutorial 2: naming and downloading a map area',
+          mapTutorial2Caption: 'After drawing the area, choose a short name without spaces, then select Download.',
+          mapTutorial3Alt: 'Map tutorial 3: adding a downloaded map file',
+          mapTutorial3Caption: 'If the downloaded area does not appear under Saved Areas, select Add file and choose either downloaded file. MonitorFPV loads the matching pair automatically.',
+          mapTutorial4Alt: 'Map tutorial 4: verifying a saved offline area',
+          mapTutorial4Caption: 'A loaded saved area is visibly highlighted against the online background. Verify it before leaving for a location without internet.',
+          missionTutorialHeading: 'Plan and save a mission',
+          missionTutorial1Alt: 'Mission tutorial 1: mission point types and route',
+          missionTutorial1Caption: 'Mission Plan creates the route followed by the center steering gauge. Departure is reached within 500 m; waypoints, objectives and landing are reached within 100 m. Interest points mark references without joining the route. Emergency zones mark areas chosen in advance for a possible emergency or hard landing.',
+          missionTutorial2Alt: 'Mission tutorial 2: editing, saving, and loading a mission',
+          missionTutorial2Caption: 'Undo and Clear edit the plan. Saving and loading follow the same file workflow as Map Layers, and a mission can be attached to a saved map. Load Mission is at the bottom. Verify both map and mission before going offline.',
+          faqHeading: 'Frequently asked questions',
+          faqReceiveQuestion: 'Can MonitorFPV control the drone?',
+          faqReceiveAnswer: 'No. It only receives CRSF telemetry and has no command uplink to the aircraft.',
+          faqDroneQuestion: 'Do I need to change the drone?',
+          faqDroneAnswer: 'Not if it already uses ExpressLRS and sends telemetry to the transmitter. The additional setup is compatible Backpack firmware and Wi-Fi telemetry enabled on the transmitter.',
+          faqWifiQuestion: 'Does 5 GHz Wi-Fi work?',
+          faqWifiAnswer: 'No. Use a 2.4 GHz Wi-Fi network. “5 GHz Wi-Fi” and “5G mobile service” are different technologies.',
+          faqNetworkQuestion: 'Which Wi-Fi network should I join?',
+          faqNetworkAnswer: 'Use the 2.4 GHz home or hotspot network saved in the Backpack, or “Backpack ELRS XXXXXX” with password “expresslrs”.',
+          faqOfflineQuestion: 'Does MonitorFPV work without internet?',
+          faqOfflineAnswer: 'Yes for telemetry and previously saved maps and missions. Internet is needed to prepare new online map areas.',
+          tutorialViewer: 'Tutorial image viewer',
+          previousTutorial: 'Previous image',
+          nextTutorial: 'Next image',
+          closeTutorial: 'Close tutorial',
+          zoomIn: 'Zoom in',
+          zoomOut: 'Zoom out'
+        },
+        'pt-BR': {
+          receiveOnlyTitle: 'O MonitorFPV apenas recebe dados',
+          receiveOnlyText: 'Ele escuta a telemetria do Wi-Fi Backpack do transmissor ExpressLRS e nunca envia comandos ou dados de volta ao drone.',
+          receiveOnlyWhy: 'A comunicação bidirecional por MAVLink é outro fluxo de trabalho. O MonitorFPV permanece no downlink de telemetria CRSF para não trocar alcance e latência do link pela capacidade de uplink.',
+          connectionHeading: 'Conecte o transmissor',
+          connectionIntro: 'A configuração normal não exige nenhuma alteração específica do MonitorFPV em um drone equipado com ELRS.',
+          connect1Heading: 'Mantenha a configuração do drone',
+          connect1Text: 'Se a telemetria ELRS já chega ao transmissor, nada adicional é necessário na aeronave.',
+          connect2Heading: 'Ative a telemetria do Backpack',
+          connect2Text: 'Use Backpack 1.5.8+. No script Lua do ExpressLRS, abra Backpack → Telemetry → WiFi e mantenha a saída CRSF.',
+          connect3Heading: 'Use Wi-Fi de 2,4 GHz',
+          connect3Text: 'O Backpack não entra em uma rede Wi-Fi configurada apenas para 5 GHz. Isso não tem relação com o serviço móvel 5G.',
+          connect4Heading: 'Rede doméstica opcional',
+          connect4Text: 'Ao gravar o Backpack, salve o nome e a senha de uma rede doméstica ou hotspot de 2,4 GHz para a conexão automática em testes de bancada.',
+          connect5Heading: 'Rede de reserva do Backpack',
+          connect5Text: 'Após cerca de um minuto ele pode criar “Backpack ELRS XXXXXX”. Entre com a senha “expresslrs”. Os dois dispositivos devem compartilhar o mesmo Wi-Fi.',
+          tutorialsHeading: 'Tutoriais com imagens',
+          tutorialsIntro: 'Selecione qualquer imagem para examiná-la em tamanho completo.',
+          openImage: 'Abrir imagem em tamanho completo',
+          mapTutorialHeading: 'Salve um mapa para uso offline',
+          mapTutorial1Alt: 'Tutorial de mapa 1: seleção de uma área para uso offline',
+          mapTutorial1Caption: 'Abra Camadas do Mapa e selecione a área que deseja usar sem internet. Antes de desenhar, aproxime todas as partes importantes: o maior nível de detalhe realmente visto é o detalhe salvo no download.',
+          mapTutorial2Alt: 'Tutorial de mapa 2: nome e download de uma área',
+          mapTutorial2Caption: 'Depois de desenhar a área, escolha um nome curto e sem espaços e selecione Baixar.',
+          mapTutorial3Alt: 'Tutorial de mapa 3: adição de um arquivo de mapa baixado',
+          mapTutorial3Caption: 'Se a área baixada não aparecer em Áreas Salvas, selecione Adicionar arquivo e escolha qualquer um dos arquivos baixados. O MonitorFPV carrega o par correspondente automaticamente.',
+          mapTutorial4Alt: 'Tutorial de mapa 4: verificação de uma área offline salva',
+          mapTutorial4Caption: 'Uma área salva e carregada fica destacada sobre o mapa online. Verifique-a antes de seguir para um local sem internet.',
+          missionTutorialHeading: 'Planeje e salve uma missão',
+          missionTutorial1Alt: 'Tutorial de missão 1: tipos de pontos e rota da missão',
+          missionTutorial1Caption: 'O Plano de Missão cria a rota seguida pelo indicador central de direção. A partida é atingida dentro de 500 m; waypoints, objetivos e pouso são atingidos dentro de 100 m. Pontos de interesse marcam referências sem entrar na rota. Zonas de emergência marcam áreas escolhidas previamente para uma possível emergência ou pouso forçado.',
+          missionTutorial2Alt: 'Tutorial de missão 2: edição, salvamento e carregamento',
+          missionTutorial2Caption: 'Desfazer e Limpar editam o plano. Salvar e carregar seguem o mesmo fluxo de arquivos das Camadas do Mapa, e uma missão pode ser vinculada a um mapa salvo. Carregar Missão fica na parte inferior. Verifique o mapa e a missão antes de ficar offline.',
+          faqHeading: 'Perguntas frequentes',
+          faqReceiveQuestion: 'O MonitorFPV pode controlar o drone?',
+          faqReceiveAnswer: 'Não. Ele apenas recebe telemetria CRSF e não possui uplink de comandos para a aeronave.',
+          faqDroneQuestion: 'Preciso alterar o drone?',
+          faqDroneAnswer: 'Não, se ele já usa ExpressLRS e envia telemetria ao transmissor. A configuração adicional é o firmware Backpack compatível e a telemetria Wi-Fi ativada no transmissor.',
+          faqWifiQuestion: 'O Wi-Fi de 5 GHz funciona?',
+          faqWifiAnswer: 'Não. Use uma rede Wi-Fi de 2,4 GHz. “Wi-Fi de 5 GHz” e “serviço móvel 5G” são tecnologias diferentes.',
+          faqNetworkQuestion: 'Em qual rede Wi-Fi devo entrar?',
+          faqNetworkAnswer: 'Use a rede doméstica ou hotspot de 2,4 GHz salva no Backpack, ou “Backpack ELRS XXXXXX” com a senha “expresslrs”.',
+          faqOfflineQuestion: 'O MonitorFPV funciona sem internet?',
+          faqOfflineAnswer: 'Sim, para telemetria e mapas e missões já salvos. A internet é necessária para preparar novas áreas do mapa online.',
+          tutorialViewer: 'Visualizador do tutorial',
+          previousTutorial: 'Imagem anterior',
+          nextTutorial: 'Próxima imagem',
+          closeTutorial: 'Fechar tutorial',
+          zoomIn: 'Ampliar',
+          zoomOut: 'Reduzir'
+        },
+        'uk-UA': {
+          receiveOnlyTitle: 'MonitorFPV лише приймає дані',
+          receiveOnlyText: 'Він слухає телеметрію від Wi-Fi Backpack передавача ExpressLRS і ніколи не надсилає команди чи дані назад до дрона.',
+          receiveOnlyWhy: 'Двосторонній MAVLink — це інший робочий процес. MonitorFPV навмисно використовує downlink телеметрії CRSF, щоб не обмінювати дальність і затримку радіолінії на можливість uplink.',
+          connectionHeading: 'Підключіть передавач',
+          connectionIntro: 'Звичайне налаштування не потребує спеціальних для MonitorFPV змін на дроні з ELRS.',
+          connect1Heading: 'Збережіть налаштування дрона',
+          connect1Text: 'Якщо телеметрія ELRS уже надходить до передавача, на борту нічого додаткового не потрібно.',
+          connect2Heading: 'Увімкніть телеметрію Backpack',
+          connect2Text: 'Використовуйте Backpack 1.5.8+. У Lua-скрипті ExpressLRS відкрийте Backpack → Telemetry → WiFi та залиште вихід CRSF.',
+          connect3Heading: 'Використовуйте Wi-Fi 2,4 ГГц',
+          connect3Text: 'Backpack не підключається до мережі Wi-Fi, налаштованої лише на 5 ГГц. Це не пов’язано з мобільним зв’язком 5G.',
+          connect4Heading: 'Необов’язкова домашня мережа',
+          connect4Text: 'Під час прошивання збережіть назву й пароль домашньої мережі або точки доступу 2,4 ГГц для автоматичних стендових тестів.',
+          connect5Heading: 'Резервна мережа Backpack',
+          connect5Text: 'Приблизно через хвилину він може створити “Backpack ELRS XXXXXX”. Підключіться з паролем “expresslrs”. Обидва пристрої мають бути в одній мережі Wi-Fi.',
+          tutorialsHeading: 'Інструкції в зображеннях',
+          tutorialsIntro: 'Виберіть будь-яке зображення, щоб переглянути його в повному розмірі.',
+          openImage: 'Відкрити зображення в повному розмірі',
+          mapTutorialHeading: 'Збереження карти для роботи офлайн',
+          mapTutorial1Alt: 'Інструкція з карти 1: вибір області для офлайн-роботи',
+          mapTutorial1Caption: 'Відкрийте «Шари мапи» та виберіть область, яку потрібно використовувати без інтернету. Перед малюванням наблизьте всі важливі частини: у завантаженні зберігається найвища деталізація, яку ви фактично переглянули.',
+          mapTutorial2Alt: 'Інструкція з карти 2: назва та завантаження області',
+          mapTutorial2Caption: 'Після малювання області виберіть коротку назву без пробілів, а потім натисніть «Завантажити».',
+          mapTutorial3Alt: 'Інструкція з карти 3: додавання завантаженого файла карти',
+          mapTutorial3Caption: 'Якщо завантажена область не з’явилася в переліку збережених, натисніть «Додати файл» і виберіть будь-який із завантажених файлів. MonitorFPV автоматично завантажить відповідну пару.',
+          mapTutorial4Alt: 'Інструкція з карти 4: перевірка збереженої офлайн-області',
+          mapTutorial4Caption: 'Завантажена збережена область помітно виділяється на тлі онлайн-карти. Перевірте її перед виїздом у місце без інтернету.',
+          missionTutorialHeading: 'Планування та збереження місії',
+          missionTutorial1Alt: 'Інструкція з місії 1: типи точок і маршрут',
+          missionTutorial1Caption: '«План місії» створює маршрут, за яким стежить центральний індикатор напрямку. Точка старту зараховується в радіусі 500 м; маршрутні точки, цілі та посадка — у радіусі 100 м. Точки інтересу позначають орієнтири, не приєднуючись до маршруту. Аварійні зони позначають заздалегідь вибрані місця для можливої аварійної або жорсткої посадки.',
+          missionTutorial2Alt: 'Інструкція з місії 2: редагування, збереження та завантаження',
+          missionTutorial2Caption: '«Скасувати» та «Очистити» редагують план. Збереження й завантаження використовують той самий файловий процес, що й «Шари мапи», а місію можна прив’язати до збереженої карти. «Завантажити місію» розташовано внизу. Перевірте карту й місію до переходу в офлайн.',
+          faqHeading: 'Часті запитання',
+          faqReceiveQuestion: 'Чи може MonitorFPV керувати дроном?',
+          faqReceiveAnswer: 'Ні. Він лише приймає телеметрію CRSF і не має каналу команд до дрона.',
+          faqDroneQuestion: 'Чи потрібно змінювати дрон?',
+          faqDroneAnswer: 'Ні, якщо він уже використовує ExpressLRS і передає телеметрію на передавач. Додаткове налаштування — сумісна прошивка Backpack і телеметрія Wi-Fi на передавачі.',
+          faqWifiQuestion: 'Чи працює Wi-Fi 5 ГГц?',
+          faqWifiAnswer: 'Ні. Використовуйте мережу Wi-Fi 2,4 ГГц. «Wi-Fi 5 ГГц» і «мобільний зв’язок 5G» — це різні технології.',
+          faqNetworkQuestion: 'До якої мережі Wi-Fi підключатися?',
+          faqNetworkAnswer: 'Використовуйте збережену в Backpack домашню мережу або точку доступу 2,4 ГГц чи “Backpack ELRS XXXXXX” з паролем “expresslrs”.',
+          faqOfflineQuestion: 'Чи працює MonitorFPV без інтернету?',
+          faqOfflineAnswer: 'Так, для телеметрії та раніше збережених карт і місій. Інтернет потрібен для підготовки нових областей онлайн-карти.',
+          tutorialViewer: 'Перегляд зображень інструкції',
+          previousTutorial: 'Попереднє зображення',
+          nextTutorial: 'Наступне зображення',
+          closeTutorial: 'Закрити інструкцію',
+          zoomIn: 'Збільшити',
+          zoomOut: 'Зменшити'
+        }
+      };
+
       let currentLanguage = 'en-US';
+      let currentTutorialIndex = 0;
+      let currentTutorialTrigger = null;
+
+      function activeText() {
+        const language = languages[currentLanguage] || languages['en-US'];
+        return { ...language.text, ...(onboardingText[currentLanguage] || onboardingText['en-US']) };
+      }
+
+      function setTutorialZoom(zoomed) {
+        tutorialMedia.classList.toggle('is-zoomed', zoomed);
+        tutorialZoom.textContent = zoomed ? '−' : '+';
+        tutorialZoom.dataset.i18nAriaLabel = zoomed ? 'zoomOut' : 'zoomIn';
+        tutorialZoom.setAttribute('aria-label', activeText()[zoomed ? 'zoomOut' : 'zoomIn']);
+        tutorialMedia.scrollTop = 0;
+        tutorialMedia.scrollLeft = 0;
+      }
+
+      function showTutorial(index, resetZoom = true) {
+        currentTutorialIndex = (index + tutorialFigures.length) % tutorialFigures.length;
+        const figure = tutorialFigures[currentTutorialIndex];
+        const sourceImage = figure.querySelector('img');
+        tutorialImage.src = sourceImage.currentSrc || sourceImage.src;
+        tutorialImage.alt = sourceImage.alt;
+        tutorialCaption.textContent = figure.querySelector('figcaption').textContent.trim();
+        tutorialCount.textContent = `${currentTutorialIndex + 1} / ${tutorialFigures.length}`;
+        if (resetZoom) setTutorialZoom(false);
+      }
+
+      function openTutorial(index, trigger) {
+        currentTutorialTrigger = trigger;
+        showTutorial(index);
+        tutorialLightbox.hidden = false;
+        document.body.classList.add('monitorfpv-lightbox-open');
+        tutorialDialog.focus();
+      }
+
+      function closeTutorial() {
+        tutorialLightbox.hidden = true;
+        document.body.classList.remove('monitorfpv-lightbox-open');
+        setTutorialZoom(false);
+        currentTutorialTrigger?.focus();
+      }
 
       function closeLanguageMenu() {
         languageMenu.hidden = true;
@@ -821,21 +1468,22 @@
       function applyLanguage(languageCode) {
         const language = languages[languageCode] || languages['en-US'];
         currentLanguage = languageCode in languages ? languageCode : 'en-US';
+        const localizedText = { ...language.text, ...(onboardingText[currentLanguage] || onboardingText['en-US']) };
 
         root.querySelectorAll('[data-i18n]').forEach((element) => {
-          const value = language.text[element.dataset.i18n];
+          const value = localizedText[element.dataset.i18n];
           if (value) element.textContent = value;
         });
         root.querySelectorAll('[data-i18n-html]').forEach((element) => {
-          const value = language.text[element.dataset.i18nHtml];
+          const value = localizedText[element.dataset.i18nHtml];
           if (value) element.innerHTML = value;
         });
         root.querySelectorAll('[data-i18n-alt]').forEach((element) => {
-          const value = language.text[element.dataset.i18nAlt];
+          const value = localizedText[element.dataset.i18nAlt];
           if (value) element.alt = value;
         });
         root.querySelectorAll('[data-i18n-aria-label]').forEach((element) => {
-          const value = language.text[element.dataset.i18nAriaLabel];
+          const value = localizedText[element.dataset.i18nAriaLabel];
           if (value) element.setAttribute('aria-label', value);
         });
 
@@ -849,6 +1497,7 @@
         root.querySelectorAll('.monitorfpv-language-option').forEach((option) => {
           option.setAttribute('aria-checked', String(option.dataset.language === currentLanguage));
         });
+        if (!tutorialLightbox.hidden) showTutorial(currentTutorialIndex, false);
         try { localStorage.setItem('monitorfpv-language', currentLanguage); } catch (_) { /* storage may be unavailable */ }
         closeLanguageMenu();
       }
@@ -867,11 +1516,34 @@
         });
       });
 
+      tutorialFigures.forEach((figure, index) => {
+        const link = figure.querySelector('a');
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
+          openTutorial(index, link);
+        });
+      });
+
+      tutorialPrevious.addEventListener('click', () => showTutorial(currentTutorialIndex - 1));
+      tutorialNext.addEventListener('click', () => showTutorial(currentTutorialIndex + 1));
+      tutorialClose.addEventListener('click', closeTutorial);
+      tutorialZoom.addEventListener('click', () => setTutorialZoom(!tutorialMedia.classList.contains('is-zoomed')));
+      tutorialImage.addEventListener('click', () => setTutorialZoom(!tutorialMedia.classList.contains('is-zoomed')));
+      tutorialLightbox.addEventListener('click', (event) => {
+        if (event.target === tutorialLightbox) closeTutorial();
+      });
+
       document.addEventListener('click', (event) => {
         if (!languageControl.contains(event.target)) closeLanguageMenu();
       });
 
       document.addEventListener('keydown', (event) => {
+        if (!tutorialLightbox.hidden) {
+          if (event.key === 'Escape') closeTutorial();
+          if (event.key === 'ArrowLeft') showTutorial(currentTutorialIndex - 1);
+          if (event.key === 'ArrowRight') showTutorial(currentTutorialIndex + 1);
+          return;
+        }
         if (event.key === 'Escape' && !languageMenu.hidden) {
           closeLanguageMenu();
           languageToggle.focus();
