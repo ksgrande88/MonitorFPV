@@ -330,9 +330,17 @@
       text-align: left;
       text-decoration: none;
       cursor: pointer;
+      box-shadow: 0 0 0 rgba(107, 231, 127, 0);
+      transform: translateY(0);
+      transition: transform 150ms ease, border-color 150ms ease, background 150ms ease, box-shadow 150ms ease;
     }
 
-    #monitorfpv-landing-mockup .monitorfpv-platform:hover { border-color: #f09a2c; }
+    #monitorfpv-landing-mockup .monitorfpv-platform:hover {
+      border-color: #75e889;
+      background: linear-gradient(135deg, #1d2c21, #182024);
+      box-shadow: 0 8px 20px rgba(25, 164, 66, 0.16), inset 0 0 18px rgba(107, 231, 127, 0.035);
+      transform: translateY(-2px);
+    }
 
     #monitorfpv-landing-mockup .monitorfpv-platform:focus-visible {
       outline: 2px solid #f4a137;
@@ -350,7 +358,10 @@
     }
 
     #monitorfpv-landing-mockup .monitorfpv-platform:disabled:hover {
-      border-color: #3b454b;
+      border-color: #59646a;
+      background: #181e21;
+      box-shadow: 0 6px 16px rgba(126, 138, 145, 0.08);
+      transform: translateY(-1px);
     }
 
     #monitorfpv-landing-mockup .monitorfpv-platform svg {
@@ -816,9 +827,36 @@
     #monitorfpv-landing-mockup .monitorfpv-faq details p {
       margin-top: 7px;
       color: #9ea8ad;
-      font-size: 10px;
+      font-size: 12px;
       line-height: 1.52;
     }
+
+    #monitorfpv-landing-mockup .monitorfpv-name { font-size: 20px; }
+    #monitorfpv-landing-mockup .monitorfpv-slogan,
+    #monitorfpv-landing-mockup .monitorfpv-language-label,
+    #monitorfpv-landing-mockup .monitorfpv-language-option { font-size: 13px; }
+    #monitorfpv-landing-mockup .monitorfpv-kicker,
+    #monitorfpv-landing-mockup .monitorfpv-section-label span,
+    #monitorfpv-landing-mockup .monitorfpv-download-status,
+    #monitorfpv-landing-mockup .monitorfpv-note { font-size: 13px; }
+    #monitorfpv-landing-mockup .monitorfpv-section-label h2,
+    #monitorfpv-landing-mockup .monitorfpv-copy h2 { font-size: 20px; }
+    #monitorfpv-landing-mockup .monitorfpv-platform strong { font-size: 15px; }
+    #monitorfpv-landing-mockup .monitorfpv-platform small { font-size: 12px; }
+    #monitorfpv-landing-mockup .monitorfpv-copy p,
+    #monitorfpv-landing-mockup .monitorfpv-copy li { font-size: 14px; }
+    #monitorfpv-landing-mockup .monitorfpv-step h3,
+    #monitorfpv-landing-mockup .monitorfpv-receive-only strong,
+    #monitorfpv-landing-mockup .monitorfpv-connect-item h3 { font-size: 14px; }
+    #monitorfpv-landing-mockup .monitorfpv-step p,
+    #monitorfpv-landing-mockup .monitorfpv-receive-only p,
+    #monitorfpv-landing-mockup .monitorfpv-connect-item p { font-size: 13px; }
+    #monitorfpv-landing-mockup .monitorfpv-tutorials > p { font-size: 14px; }
+    #monitorfpv-landing-mockup .monitorfpv-tutorial-group h3 { font-size: 18px; }
+    #monitorfpv-landing-mockup .monitorfpv-tutorial-gallery figcaption,
+    #monitorfpv-landing-mockup .monitorfpv-lightbox-count { font-size: 12px; }
+    #monitorfpv-landing-mockup .monitorfpv-lightbox-caption { font-size: 14px; }
+    #monitorfpv-landing-mockup .monitorfpv-faq summary { font-size: 13px; }
 
     @media (max-width: 900px) {
       body { padding: 0; }
@@ -944,18 +982,18 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg>
             <span><strong>Windows</strong><small data-i18n="firstRelease">Version 1.0.1</small></span>
           </a>
-          <button class="monitorfpv-platform" type="button" data-platform="Apple" disabled aria-disabled="true">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="12" rx="2"></rect><path d="M2 20h20M7 20l1-4h8l1 4"></path></svg>
-            <span><strong>macOS / iOS</strong><small data-i18n="planned">Planned</small></span>
-          </button>
-          <a class="monitorfpv-platform monitorfpv-ready" data-platform="Android" href="https://github.com/ksgrande88/MonitorFPV/releases/download/v1.0.1/MonitorFPV-1.0.1-android-debug.apk">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"></rect><path d="M10 18h4"></path></svg>
-            <span><strong>Android</strong><small data-i18n="released">Version 1.0.1</small></span>
-          </a>
           <a class="monitorfpv-platform monitorfpv-ready" data-platform="Linux" href="https://github.com/ksgrande88/MonitorFPV/releases/download/v1.1.0/MonitorFPV-1.1.0-linux-x64.tar.gz">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M7 8l4 4-4 4M13 16h4"></path></svg>
             <span><strong>Linux</strong><small data-i18n="linuxRelease">Version 1.1.0</small></span>
           </a>
+          <a class="monitorfpv-platform monitorfpv-ready" data-platform="Android" href="https://github.com/ksgrande88/MonitorFPV/releases/download/v1.0.1/MonitorFPV-1.0.1-android-debug.apk">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"></rect><path d="M10 18h4"></path></svg>
+            <span><strong>Android</strong><small data-i18n="released">Version 1.0.1</small></span>
+          </a>
+          <button class="monitorfpv-platform" type="button" data-platform="Apple" disabled aria-disabled="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="12" rx="2"></rect><path d="M2 20h20M7 20l1-4h8l1 4"></path></svg>
+            <span><strong>macOS / iOS</strong><small data-i18n="planned">Planned</small></span>
+          </button>
         </div>
         <p class="monitorfpv-download-status" aria-live="polite" data-i18n="downloadStatusInitial">Windows, Android, and Linux are available.</p>
       </section>
