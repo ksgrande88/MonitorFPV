@@ -1040,7 +1040,7 @@
           <div class="monitorfpv-connect-item"><span>2</span><div><h3 data-i18n="connect2Heading">Enable Backpack telemetry</h3><p data-i18n="connect2Text">Use Backpack 1.5.8+. In the ExpressLRS Lua script open Backpack → Telemetry, turn it on, and then enable Wi-Fi.</p></div></div>
           <div class="monitorfpv-connect-item"><span>3</span><div><h3 data-i18n="connect3Heading">Use 2.4 GHz Wi-Fi</h3><p data-i18n="connect3Text">The Backpack cannot join a 5 GHz-only Wi-Fi network. This is unrelated to 5G mobile service.</p></div></div>
           <div class="monitorfpv-connect-item"><span>4</span><div><h3 data-i18n="connect4Heading">Optional home network</h3><p data-i18n="connect4Text">During flashing, save a 2.4 GHz home or hotspot SSID and password for automatic bench-test connection.</p></div></div>
-          <div class="monitorfpv-connect-item"><span>5</span><div><h3 data-i18n="connect5Heading">Fallback Backpack network</h3><p data-i18n="connect5Text">After about one minute it can create “Backpack ELRS XXXXXX”. Join it with password “expresslrs”. Both devices must share the same Wi-Fi.</p></div></div>
+          <div class="monitorfpv-connect-item"><span>5</span><div><h3 data-i18n="connect5Heading">Fallback Backpack network</h3><p data-i18n="connect5Text">At the flashed “auto-on” interval, it will create an “ExpressLRS TX BackPack XXXXXX” Wi-Fi network. It has no password or internet access, but telemetry flows through this channel.</p></div></div>
         </div>
       </section>
 
@@ -1131,7 +1131,7 @@
           <details><summary data-i18n="faqReceiveQuestion">Can MonitorFPV control the drone?</summary><p data-i18n="faqReceiveAnswer">No. It only receives CRSF telemetry and has no command uplink to the aircraft.</p></details>
           <details><summary data-i18n="faqDroneQuestion">Do I need to change the drone?</summary><p data-i18n="faqDroneAnswer">Not if it already uses ExpressLRS and sends telemetry to the transmitter. The additional setup is compatible Backpack firmware and Wi-Fi telemetry enabled on the transmitter.</p></details>
           <details><summary data-i18n="faqWifiQuestion">Does 5 GHz Wi-Fi work?</summary><p data-i18n="faqWifiAnswer">No. Use a 2.4 GHz Wi-Fi network. “5 GHz Wi-Fi” and “5G mobile service” are different technologies.</p></details>
-          <details><summary data-i18n="faqNetworkQuestion">Which Wi-Fi network should I join?</summary><p data-i18n="faqNetworkAnswer">Use the 2.4 GHz home or hotspot network saved in the Backpack, or “Backpack ELRS XXXXXX” with password “expresslrs”.</p></details>
+          <details><summary data-i18n="faqNetworkQuestion">Which Wi-Fi network should I join?</summary><p data-i18n="faqNetworkAnswer">Use the saved 2.4 GHz home or hotspot network, or the password-free “ExpressLRS TX BackPack XXXXXX” network created after the flashed auto-on interval.</p></details>
           <details><summary data-i18n="faqOfflineQuestion">Does MonitorFPV work without internet?</summary><p data-i18n="faqOfflineAnswer">Yes for telemetry and previously saved maps and missions. Internet is needed to prepare new online map areas.</p></details>
         </div>
       </section>
@@ -1357,7 +1357,7 @@
           connect4Heading: 'Optional home network',
           connect4Text: 'During flashing, save a 2.4 GHz home or hotspot SSID and password for automatic bench-test connection.',
           connect5Heading: 'Fallback Backpack network',
-          connect5Text: 'After about one minute it can create “Backpack ELRS XXXXXX”. Join it with password “expresslrs”. Both devices must share the same Wi-Fi.',
+          connect5Text: 'At the flashed “auto-on” interval, it will create an “ExpressLRS TX BackPack XXXXXX” Wi-Fi network. It has no password or internet access, but telemetry flows through this channel.',
           tutorialsHeading: 'Picture tutorials',
           tutorialsIntro: 'Select any image to inspect it at full size.',
           openImage: 'Open image at full size',
@@ -1383,7 +1383,7 @@
           faqWifiQuestion: 'Does 5 GHz Wi-Fi work?',
           faqWifiAnswer: 'No. Use a 2.4 GHz Wi-Fi network. “5 GHz Wi-Fi” and “5G mobile service” are different technologies.',
           faqNetworkQuestion: 'Which Wi-Fi network should I join?',
-          faqNetworkAnswer: 'Use the 2.4 GHz home or hotspot network saved in the Backpack, or “Backpack ELRS XXXXXX” with password “expresslrs”.',
+          faqNetworkAnswer: 'Use the saved 2.4 GHz home or hotspot network, or the password-free “ExpressLRS TX BackPack XXXXXX” network created after the flashed auto-on interval.',
           faqOfflineQuestion: 'Does MonitorFPV work without internet?',
           faqOfflineAnswer: 'Yes for telemetry and previously saved maps and missions. Internet is needed to prepare new online map areas.',
           tutorialViewer: 'Tutorial image viewer',
@@ -1408,7 +1408,7 @@
           connect4Heading: 'Rede doméstica opcional',
           connect4Text: 'Ao gravar o Backpack, salve o nome e a senha de uma rede doméstica ou hotspot de 2,4 GHz para a conexão automática em testes de bancada.',
           connect5Heading: 'Rede de reserva do Backpack',
-          connect5Text: 'Após cerca de um minuto ele pode criar “Backpack ELRS XXXXXX”. Entre com a senha “expresslrs”. Os dois dispositivos devem compartilhar o mesmo Wi-Fi.',
+          connect5Text: 'No intervalo de “auto-on” gravado no firmware, será criada a rede Wi-Fi “ExpressLRS TX BackPack XXXXXX”. Ela não tem senha nem acesso à internet, mas a telemetria flui por esse canal.',
           tutorialsHeading: 'Tutoriais com imagens',
           tutorialsIntro: 'Selecione qualquer imagem para examiná-la em tamanho completo.',
           openImage: 'Abrir imagem em tamanho completo',
@@ -1434,7 +1434,7 @@
           faqWifiQuestion: 'O Wi-Fi de 5 GHz funciona?',
           faqWifiAnswer: 'Não. Use uma rede Wi-Fi de 2,4 GHz. “Wi-Fi de 5 GHz” e “serviço móvel 5G” são tecnologias diferentes.',
           faqNetworkQuestion: 'Em qual rede Wi-Fi devo entrar?',
-          faqNetworkAnswer: 'Use a rede doméstica ou hotspot de 2,4 GHz salva no Backpack, ou “Backpack ELRS XXXXXX” com a senha “expresslrs”.',
+          faqNetworkAnswer: 'Use a rede doméstica ou hotspot de 2,4 GHz salva, ou a rede sem senha “ExpressLRS TX BackPack XXXXXX”, criada após o intervalo de auto-on gravado.',
           faqOfflineQuestion: 'O MonitorFPV funciona sem internet?',
           faqOfflineAnswer: 'Sim, para telemetria e mapas e missões já salvos. A internet é necessária para preparar novas áreas do mapa online.',
           tutorialViewer: 'Visualizador do tutorial',
@@ -1459,7 +1459,7 @@
           connect4Heading: 'Необов’язкова домашня мережа',
           connect4Text: 'Під час прошивання збережіть назву й пароль домашньої мережі або точки доступу 2,4 ГГц для автоматичних стендових тестів.',
           connect5Heading: 'Резервна мережа Backpack',
-          connect5Text: 'Приблизно через хвилину він може створити “Backpack ELRS XXXXXX”. Підключіться з паролем “expresslrs”. Обидва пристрої мають бути в одній мережі Wi-Fi.',
+          connect5Text: 'Після заданого під час прошивання інтервалу “auto-on” буде створено мережу Wi-Fi “ExpressLRS TX BackPack XXXXXX”. Вона не має пароля чи доступу до інтернету, але телеметрія передається цим каналом.',
           tutorialsHeading: 'Інструкції в зображеннях',
           tutorialsIntro: 'Виберіть будь-яке зображення, щоб переглянути його в повному розмірі.',
           openImage: 'Відкрити зображення в повному розмірі',
@@ -1485,7 +1485,7 @@
           faqWifiQuestion: 'Чи працює Wi-Fi 5 ГГц?',
           faqWifiAnswer: 'Ні. Використовуйте мережу Wi-Fi 2,4 ГГц. «Wi-Fi 5 ГГц» і «мобільний зв’язок 5G» — це різні технології.',
           faqNetworkQuestion: 'До якої мережі Wi-Fi підключатися?',
-          faqNetworkAnswer: 'Використовуйте збережену в Backpack домашню мережу або точку доступу 2,4 ГГц чи “Backpack ELRS XXXXXX” з паролем “expresslrs”.',
+          faqNetworkAnswer: 'Використовуйте збережену домашню мережу або точку доступу 2,4 ГГц чи безпарольну мережу “ExpressLRS TX BackPack XXXXXX”, створену після заданого інтервалу auto-on.',
           faqOfflineQuestion: 'Чи працює MonitorFPV без інтернету?',
           faqOfflineAnswer: 'Так, для телеметрії та раніше збережених карт і місій. Інтернет потрібен для підготовки нових областей онлайн-карти.',
           tutorialViewer: 'Перегляд зображень інструкції',
