@@ -615,6 +615,14 @@
       gap: 10px;
     }
 
+    #monitorfpv-landing-mockup .monitorfpv-tutorial-gallery--elrs {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-tutorial-gallery--backpack {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
     #monitorfpv-landing-mockup .monitorfpv-tutorial-gallery figure {
       min-width: 0;
       margin: 0;
@@ -853,7 +861,7 @@
     #monitorfpv-landing-mockup .monitorfpv-connect-item p { font-size: 13px; }
     #monitorfpv-landing-mockup .monitorfpv-tutorials > p { font-size: 14px; }
     #monitorfpv-landing-mockup .monitorfpv-tutorial-group h3 { font-size: 18px; }
-    #monitorfpv-landing-mockup .monitorfpv-tutorial-gallery figcaption,
+    #monitorfpv-landing-mockup .monitorfpv-tutorial-gallery figcaption { font-size: 18px; }
     #monitorfpv-landing-mockup .monitorfpv-lightbox-count { font-size: 12px; }
     #monitorfpv-landing-mockup .monitorfpv-lightbox-caption { font-size: 14px; }
     #monitorfpv-landing-mockup .monitorfpv-faq summary { font-size: 13px; }
@@ -1062,7 +1070,7 @@
         <p data-i18n="tutorialsIntro">Select any image to inspect it at full size.</p>
         <div class="monitorfpv-tutorial-group">
           <h3 data-i18n="elrsFlashingTutorialHeading">ELRS flashing</h3>
-          <div class="monitorfpv-tutorial-gallery">
+          <div class="monitorfpv-tutorial-gallery monitorfpv-tutorial-gallery--elrs">
             <figure><a href="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-1.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-1.png" alt="ExpressLRS Web Flasher main firmware choices" data-i18n-alt="elrsFlashingTutorial1Alt" loading="lazy"></a><figcaption data-i18n="elrsFlashingTutorial1Caption">Open the official ExpressLRS Web Flasher. A radio Backpack is configured through the transmitter path, not the aircraft receiver path.</figcaption></figure>
             <figure><a href="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-2.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-2.png" alt="ExpressLRS receiver firmware choice" data-i18n-alt="elrsFlashingTutorial2Alt" loading="lazy"></a><figcaption data-i18n="elrsFlashingTutorial2Caption">Receiver is for the ELRS receiver in the aircraft, not the transmitter Backpack used by MonitorFPV.</figcaption></figure>
             <figure><a href="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-3.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-3.png" alt="ExpressLRS transmitter firmware choice" data-i18n-alt="elrsFlashingTutorial3Alt" loading="lazy"></a><figcaption data-i18n="elrsFlashingTutorial3Caption">Choose Transmitter to reach the internal or external radio-module firmware.</figcaption></figure>
@@ -1073,7 +1081,7 @@
         </div>
         <div class="monitorfpv-tutorial-group">
           <h3 data-i18n="backpackConfigTutorialHeading">Backpack TX configuration</h3>
-          <div class="monitorfpv-tutorial-gallery">
+          <div class="monitorfpv-tutorial-gallery monitorfpv-tutorial-gallery--backpack">
             <figure><a href="./monitorfpv-landing-page_files/tutorials/backpack-config-1.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/backpack-config-1.png" alt="Radio tools menu with ExpressLRS selected" data-i18n-alt="backpackConfigTutorial1Alt" loading="lazy"></a><figcaption data-i18n="backpackConfigTutorial1Caption">Open the radio Tools menu and start the ExpressLRS Lua script.</figcaption></figure>
             <figure><a href="./monitorfpv-landing-page_files/tutorials/backpack-config-2.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/backpack-config-2.png" alt="ExpressLRS Lua transmitter settings" data-i18n-alt="backpackConfigTutorial2Alt" loading="lazy"></a><figcaption data-i18n="backpackConfigTutorial2Caption">Confirm the normal ELRS link settings and open TX Backpack.</figcaption></figure>
             <figure><a href="./monitorfpv-landing-page_files/tutorials/backpack-config-3.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/backpack-config-3.png" alt="ExpressLRS TX Backpack menu" data-i18n-alt="backpackConfigTutorial3Alt" loading="lazy"></a><figcaption data-i18n="backpackConfigTutorial3Caption">Open Backpack to reach its telemetry and Wi-Fi controls.</figcaption></figure>
