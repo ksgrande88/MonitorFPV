@@ -663,6 +663,22 @@
       line-height: 1.5;
     }
 
+    #monitorfpv-landing-mockup .monitorfpv-radio-profile {
+      display: grid;
+      gap: 5px;
+      margin: 0 10px 11px;
+      padding: 10px 11px;
+      border-left: 3px solid #f4a137;
+      border-radius: 5px;
+      color: #d9dee1;
+      background: rgba(244, 161, 55, 0.09);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-radio-profile strong { color: #f4a137; }
+    #monitorfpv-landing-mockup .monitorfpv-radio-profile small { color: #aeb7bc; }
+
     body.monitorfpv-lightbox-open {
       overflow: hidden;
     }
@@ -1167,7 +1183,7 @@
           <h3 data-i18n="backpackConfigTutorialHeading">Backpack TX configuration</h3>
           <div class="monitorfpv-tutorial-gallery monitorfpv-tutorial-gallery--backpack">
             <figure><a href="./monitorfpv-landing-page_files/tutorials/backpack-config-1.webp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/backpack-config-1.webp" alt="Radio tools menu with ExpressLRS selected" data-i18n-alt="backpackConfigTutorial1Alt" loading="lazy"></a><figcaption data-i18n="backpackConfigTutorial1Caption">Open the radio Tools menu and start the ExpressLRS Lua script.</figcaption></figure>
-            <figure><a href="./monitorfpv-landing-page_files/tutorials/backpack-config-2.webp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/backpack-config-2.webp" alt="ExpressLRS Lua transmitter settings" data-i18n-alt="backpackConfigTutorial2Alt" loading="lazy"></a><figcaption data-i18n="backpackConfigTutorial2Caption">Confirm the normal ELRS link settings and open TX Backpack.</figcaption></figure>
+            <figure><a href="./monitorfpv-landing-page_files/tutorials/backpack-config-2.webp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/backpack-config-2.webp" alt="ExpressLRS Lua transmitter settings" data-i18n-alt="backpackConfigTutorial2Alt" loading="lazy"></a><figcaption data-i18n="backpackConfigTutorial2Caption">Confirm the normal ELRS link settings and open TX Backpack.</figcaption><div class="monitorfpv-radio-profile"><strong data-i18n="radioProfileTitle">Recommended ELRS profiles</strong><span data-i18n="radioProfileNormal">Normal and moderately long range: 150 Hz / 1:16 telemetry.</span><span data-i18n="radioProfileLongRange">Long range, prioritizing control-link margin: 50 Hz / 1:8 telemetry.</span><small data-i18n="radioProfileWarning">Select the profile before takeoff. Never change the packet rate during flight.</small></div></figure>
             <figure><a href="./monitorfpv-landing-page_files/tutorials/backpack-config-3.webp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/backpack-config-3.webp" alt="ExpressLRS TX Backpack menu" data-i18n-alt="backpackConfigTutorial3Alt" loading="lazy"></a><figcaption data-i18n="backpackConfigTutorial3Caption">Open Backpack to reach its telemetry and Wi-Fi controls.</figcaption></figure>
             <figure><a href="./monitorfpv-landing-page_files/tutorials/backpack-config-4.webp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/backpack-config-4.webp" alt="ExpressLRS Backpack enabled on the transmitter" data-i18n-alt="backpackConfigTutorial4Alt" loading="lazy"></a><figcaption data-i18n="backpackConfigTutorial4Caption">Set Backpack to On; leave unrelated DVR and head-tracking options unchanged.</figcaption></figure>
             <figure><a href="./monitorfpv-landing-page_files/tutorials/backpack-config-5.webp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/backpack-config-5.webp" alt="ExpressLRS Backpack telemetry settings for MonitorFPV" data-i18n-alt="backpackConfigTutorial5Alt" loading="lazy"></a><figcaption data-i18n="backpackConfigTutorial5Caption">Open Telemetry, confirm Backpack 1.5.8 or newer, turn telemetry on, and enable Wi-Fi.</figcaption></figure>
@@ -1620,6 +1636,10 @@
           backpackConfigTutorialHeading: 'Backpack TX configuration',
           backpackConfigTutorial1Caption: 'Open the radio Tools menu and start the ExpressLRS Lua script.',
           backpackConfigTutorial2Caption: 'Confirm the normal ELRS link settings and open TX Backpack.',
+          radioProfileTitle: 'Recommended ELRS profiles',
+          radioProfileNormal: 'Normal and moderately long range: 150 Hz / 1:16 telemetry.',
+          radioProfileLongRange: 'Long range, prioritizing control-link margin: 50 Hz / 1:8 telemetry.',
+          radioProfileWarning: 'Select the profile before takeoff. Never change the packet rate during flight.',
           backpackConfigTutorial3Caption: 'Open Backpack to reach its telemetry and Wi-Fi controls.',
           backpackConfigTutorial4Caption: 'Set Backpack to On; leave unrelated DVR and head-tracking options unchanged.',
           backpackConfigTutorial5Caption: 'Open Telemetry, confirm Backpack 1.5.8 or newer, turn telemetry on, and enable Wi-Fi.'
@@ -1635,6 +1655,10 @@
           backpackConfigTutorialHeading: 'Configura\u00e7\u00e3o do Backpack TX',
           backpackConfigTutorial1Caption: 'Abra Tools no r\u00e1dio e inicie o script Lua do ExpressLRS.',
           backpackConfigTutorial2Caption: 'Confirme o link ELRS normal e abra TX Backpack.',
+          radioProfileTitle: 'Perfis ELRS recomendados',
+          radioProfileNormal: 'Uso normal e alcance moderadamente longo: 150 Hz / telemetria 1:16.',
+          radioProfileLongRange: 'Longo alcance, priorizando a margem do link de controle: 50 Hz / telemetria 1:8.',
+          radioProfileWarning: 'Escolha o perfil antes da decolagem. Nunca altere a taxa de pacotes durante o voo.',
           backpackConfigTutorial3Caption: 'Abra Backpack para acessar telemetria e Wi-Fi.',
           backpackConfigTutorial4Caption: 'Defina Backpack como On e mantenha DVR e head tracking inalterados.',
           backpackConfigTutorial5Caption: 'Abra Telemetry, confirme Backpack 1.5.8 ou mais recente, ative a telemetria e habilite o Wi-Fi.'
@@ -1650,6 +1674,10 @@
           backpackConfigTutorialHeading: '\u041d\u0430\u043b\u0430\u0448\u0442\u0443\u0432\u0430\u043d\u043d\u044f Backpack TX',
           backpackConfigTutorial1Caption: '\u0412\u0456\u0434\u043a\u0440\u0438\u0439\u0442\u0435 Tools \u043d\u0430 \u0440\u0430\u0434\u0456\u043e \u0456 \u0437\u0430\u043f\u0443\u0441\u0442\u0456\u0442\u044c Lua-\u0441\u043a\u0440\u0438\u043f\u0442 ExpressLRS.',
           backpackConfigTutorial2Caption: '\u041f\u0435\u0440\u0435\u0432\u0456\u0440\u0442\u0435 \u0437\u0432\u0438\u0447\u0430\u0439\u043d\u0456 \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u0438 ELRS \u0456 \u0432\u0456\u0434\u043a\u0440\u0438\u0439\u0442\u0435 TX Backpack.',
+          radioProfileTitle: '\u0420\u0435\u043a\u043e\u043c\u0435\u043d\u0434\u043e\u0432\u0430\u043d\u0456 \u043f\u0440\u043e\u0444\u0456\u043b\u0456 ELRS',
+          radioProfileNormal: '\u0417\u0432\u0438\u0447\u0430\u0439\u043d\u0456 \u043f\u043e\u043b\u044c\u043e\u0442\u0438 \u0442\u0430 \u043f\u043e\u043c\u0456\u0440\u043d\u043e \u0432\u0435\u043b\u0438\u043a\u0430 \u0434\u0430\u043b\u044c\u043d\u0456\u0441\u0442\u044c: 150 \u0413\u0446 / \u0442\u0435\u043b\u0435\u043c\u0435\u0442\u0440\u0456\u044f 1:16.',
+          radioProfileLongRange: '\u0412\u0435\u043b\u0438\u043a\u0430 \u0434\u0430\u043b\u044c\u043d\u0456\u0441\u0442\u044c \u0456\u0437 \u043f\u0440\u0456\u043e\u0440\u0438\u0442\u0435\u0442\u043e\u043c \u0437\u0430\u043f\u0430\u0441\u0443 \u043a\u0430\u043d\u0430\u043b\u0443 \u043a\u0435\u0440\u0443\u0432\u0430\u043d\u043d\u044f: 50 \u0413\u0446 / \u0442\u0435\u043b\u0435\u043c\u0435\u0442\u0440\u0456\u044f 1:8.',
+          radioProfileWarning: '\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c \u043f\u0440\u043e\u0444\u0456\u043b\u044c \u0434\u043e \u0437\u043b\u044c\u043e\u0442\u0443. \u041d\u0456\u043a\u043e\u043b\u0438 \u043d\u0435 \u0437\u043c\u0456\u043d\u044e\u0439\u0442\u0435 \u0447\u0430\u0441\u0442\u043e\u0442\u0443 \u043f\u0430\u043a\u0435\u0442\u0456\u0432 \u043f\u0456\u0434 \u0447\u0430\u0441 \u043f\u043e\u043b\u044c\u043e\u0442\u0443.',
           backpackConfigTutorial3Caption: '\u0412\u0456\u0434\u043a\u0440\u0438\u0439\u0442\u0435 Backpack \u0434\u043b\u044f \u043a\u0435\u0440\u0443\u0432\u0430\u043d\u043d\u044f \u0442\u0435\u043b\u0435\u043c\u0435\u0442\u0440\u0456\u0454\u044e \u0442\u0430 Wi-Fi.',
           backpackConfigTutorial4Caption: '\u0423\u0432\u0456\u043c\u043a\u043d\u0456\u0442\u044c Backpack; \u043d\u0435 \u0437\u043c\u0456\u043d\u044e\u0439\u0442\u0435 DVR \u0456 head tracking.',
           backpackConfigTutorial5Caption: '\u0412\u0456\u0434\u043a\u0440\u0438\u0439\u0442\u0435 Telemetry, \u043f\u0435\u0440\u0435\u0432\u0456\u0440\u0442\u0435 Backpack 1.5.8+, \u0443\u0432\u0456\u043c\u043a\u043d\u0456\u0442\u044c \u0442\u0435\u043b\u0435\u043c\u0435\u0442\u0440\u0456\u044e \u0442\u0430 Wi-Fi.'
