@@ -866,6 +866,14 @@
     #monitorfpv-landing-mockup .monitorfpv-lightbox-caption { font-size: 14px; }
     #monitorfpv-landing-mockup .monitorfpv-faq summary { font-size: 13px; }
 
+    @media (min-width: 901px) {
+      #monitorfpv-landing-mockup .monitorfpv-hero h1 {
+        max-width: none;
+        font-size: clamp(28px, 2.35vw, 38px);
+        white-space: nowrap;
+      }
+    }
+
     @media (max-width: 900px) {
       body { padding: 0; }
       #monitorfpv-landing-mockup { border-radius: 14px; }
@@ -890,6 +898,14 @@
       #monitorfpv-landing-mockup .monitorfpv-section-label { align-items: flex-start; flex-direction: column; gap: 4px; }
       #monitorfpv-landing-mockup .monitorfpv-connect-list,
       #monitorfpv-landing-mockup .monitorfpv-tutorial-gallery { grid-template-columns: 1fr; }
+      #monitorfpv-landing-mockup .monitorfpv-tutorial-gallery--backpack {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      #monitorfpv-landing-mockup .monitorfpv-tutorial-gallery--backpack figure:last-child {
+        grid-column: 1 / -1;
+        width: calc(50% - 5px);
+        justify-self: center;
+      }
       #monitorfpv-landing-mockup .monitorfpv-lightbox { padding: 8px; }
       #monitorfpv-landing-mockup .monitorfpv-lightbox-dialog { width: 100%; max-height: calc(100dvh - 16px); }
       #monitorfpv-landing-mockup .monitorfpv-lightbox-media {
@@ -1071,41 +1087,41 @@
         <div class="monitorfpv-tutorial-group">
           <h3 data-i18n="elrsFlashingTutorialHeading">ELRS flashing</h3>
           <div class="monitorfpv-tutorial-gallery monitorfpv-tutorial-gallery--elrs">
-            <figure><a href="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-1.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-1.png" alt="ExpressLRS Web Flasher main firmware choices" data-i18n-alt="elrsFlashingTutorial1Alt" loading="lazy"></a><figcaption data-i18n="elrsFlashingTutorial1Caption">Open the official ExpressLRS Web Flasher. A radio Backpack is configured through the transmitter path, not the aircraft receiver path.</figcaption></figure>
-            <figure><a href="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-2.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-2.png" alt="ExpressLRS receiver firmware choice" data-i18n-alt="elrsFlashingTutorial2Alt" loading="lazy"></a><figcaption data-i18n="elrsFlashingTutorial2Caption">Receiver is for the ELRS receiver in the aircraft, not the transmitter Backpack used by MonitorFPV.</figcaption></figure>
-            <figure><a href="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-3.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-3.png" alt="ExpressLRS transmitter firmware choice" data-i18n-alt="elrsFlashingTutorial3Alt" loading="lazy"></a><figcaption data-i18n="elrsFlashingTutorial3Caption">Choose Transmitter to reach the internal or external radio-module firmware.</figcaption></figure>
-            <figure><a href="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-4.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-4.png" alt="ExpressLRS Backpack firmware choices" data-i18n-alt="elrsFlashingTutorial4Alt" loading="lazy"></a><figcaption data-i18n="elrsFlashingTutorial4Caption">Under Backpack Firmware choose Transmitter Module.</figcaption></figure>
-            <figure><a href="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-5.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-5.png" alt="ExpressLRS transmitter Backpack hardware selection" data-i18n-alt="elrsFlashingTutorial5Alt" loading="lazy"></a><figcaption data-i18n="elrsFlashingTutorial5Caption">Choose Backpack 1.5.8 or newer and the exact manufacturer and hardware target.</figcaption></figure>
-            <figure><a href="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-6.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-6.png" alt="ExpressLRS transmitter Backpack flashing options" data-i18n-alt="elrsFlashingTutorial6Alt" loading="lazy"></a><figcaption data-i18n="elrsFlashingTutorial6Caption">Set the bind phrase, optional 2.4 GHz Wi-Fi details, auto-on interval, and flashing method, then complete the flash.</figcaption></figure>
+            <figure><a href="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-1.webp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-1.webp" alt="ExpressLRS Web Flasher main firmware choices" data-i18n-alt="elrsFlashingTutorial1Alt" loading="lazy"></a><figcaption data-i18n="elrsFlashingTutorial1Caption">Open the official ExpressLRS Web Flasher. A radio Backpack is configured through the transmitter path, not the aircraft receiver path.</figcaption></figure>
+            <figure><a href="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-2.webp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-2.webp" alt="ExpressLRS receiver firmware choice" data-i18n-alt="elrsFlashingTutorial2Alt" loading="lazy"></a><figcaption data-i18n="elrsFlashingTutorial2Caption">Receiver is for the ELRS receiver in the aircraft, not the transmitter Backpack used by MonitorFPV.</figcaption></figure>
+            <figure><a href="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-3.webp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-3.webp" alt="ExpressLRS transmitter firmware choice" data-i18n-alt="elrsFlashingTutorial3Alt" loading="lazy"></a><figcaption data-i18n="elrsFlashingTutorial3Caption">Choose Transmitter to reach the internal or external radio-module firmware.</figcaption></figure>
+            <figure><a href="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-4.webp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-4.webp" alt="ExpressLRS Backpack firmware choices" data-i18n-alt="elrsFlashingTutorial4Alt" loading="lazy"></a><figcaption data-i18n="elrsFlashingTutorial4Caption">Under Backpack Firmware choose Transmitter Module.</figcaption></figure>
+            <figure><a href="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-5.webp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-5.webp" alt="ExpressLRS transmitter Backpack hardware selection" data-i18n-alt="elrsFlashingTutorial5Alt" loading="lazy"></a><figcaption data-i18n="elrsFlashingTutorial5Caption">Choose Backpack 1.5.8 or newer and the exact manufacturer and hardware target.</figcaption></figure>
+            <figure><a href="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-6.webp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-6.webp" alt="ExpressLRS transmitter Backpack flashing options" data-i18n-alt="elrsFlashingTutorial6Alt" loading="lazy"></a><figcaption data-i18n="elrsFlashingTutorial6Caption">Set the bind phrase, optional 2.4 GHz Wi-Fi details, auto-on interval, and flashing method, then complete the flash.</figcaption></figure>
           </div>
         </div>
         <div class="monitorfpv-tutorial-group">
           <h3 data-i18n="backpackConfigTutorialHeading">Backpack TX configuration</h3>
           <div class="monitorfpv-tutorial-gallery monitorfpv-tutorial-gallery--backpack">
-            <figure><a href="./monitorfpv-landing-page_files/tutorials/backpack-config-1.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/backpack-config-1.png" alt="Radio tools menu with ExpressLRS selected" data-i18n-alt="backpackConfigTutorial1Alt" loading="lazy"></a><figcaption data-i18n="backpackConfigTutorial1Caption">Open the radio Tools menu and start the ExpressLRS Lua script.</figcaption></figure>
-            <figure><a href="./monitorfpv-landing-page_files/tutorials/backpack-config-2.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/backpack-config-2.png" alt="ExpressLRS Lua transmitter settings" data-i18n-alt="backpackConfigTutorial2Alt" loading="lazy"></a><figcaption data-i18n="backpackConfigTutorial2Caption">Confirm the normal ELRS link settings and open TX Backpack.</figcaption></figure>
-            <figure><a href="./monitorfpv-landing-page_files/tutorials/backpack-config-3.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/backpack-config-3.png" alt="ExpressLRS TX Backpack menu" data-i18n-alt="backpackConfigTutorial3Alt" loading="lazy"></a><figcaption data-i18n="backpackConfigTutorial3Caption">Open Backpack to reach its telemetry and Wi-Fi controls.</figcaption></figure>
-            <figure><a href="./monitorfpv-landing-page_files/tutorials/backpack-config-4.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/backpack-config-4.png" alt="ExpressLRS Backpack enabled on the transmitter" data-i18n-alt="backpackConfigTutorial4Alt" loading="lazy"></a><figcaption data-i18n="backpackConfigTutorial4Caption">Set Backpack to On; leave unrelated DVR and head-tracking options unchanged.</figcaption></figure>
-            <figure><a href="./monitorfpv-landing-page_files/tutorials/backpack-config-5.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/backpack-config-5.png" alt="ExpressLRS Backpack telemetry settings for MonitorFPV" data-i18n-alt="backpackConfigTutorial5Alt" loading="lazy"></a><figcaption data-i18n="backpackConfigTutorial5Caption">Open Telemetry, confirm Backpack 1.5.8 or newer, turn telemetry on, and enable Wi-Fi.</figcaption></figure>
+            <figure><a href="./monitorfpv-landing-page_files/tutorials/backpack-config-1.webp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/backpack-config-1.webp" alt="Radio tools menu with ExpressLRS selected" data-i18n-alt="backpackConfigTutorial1Alt" loading="lazy"></a><figcaption data-i18n="backpackConfigTutorial1Caption">Open the radio Tools menu and start the ExpressLRS Lua script.</figcaption></figure>
+            <figure><a href="./monitorfpv-landing-page_files/tutorials/backpack-config-2.webp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/backpack-config-2.webp" alt="ExpressLRS Lua transmitter settings" data-i18n-alt="backpackConfigTutorial2Alt" loading="lazy"></a><figcaption data-i18n="backpackConfigTutorial2Caption">Confirm the normal ELRS link settings and open TX Backpack.</figcaption></figure>
+            <figure><a href="./monitorfpv-landing-page_files/tutorials/backpack-config-3.webp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/backpack-config-3.webp" alt="ExpressLRS TX Backpack menu" data-i18n-alt="backpackConfigTutorial3Alt" loading="lazy"></a><figcaption data-i18n="backpackConfigTutorial3Caption">Open Backpack to reach its telemetry and Wi-Fi controls.</figcaption></figure>
+            <figure><a href="./monitorfpv-landing-page_files/tutorials/backpack-config-4.webp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/backpack-config-4.webp" alt="ExpressLRS Backpack enabled on the transmitter" data-i18n-alt="backpackConfigTutorial4Alt" loading="lazy"></a><figcaption data-i18n="backpackConfigTutorial4Caption">Set Backpack to On; leave unrelated DVR and head-tracking options unchanged.</figcaption></figure>
+            <figure><a href="./monitorfpv-landing-page_files/tutorials/backpack-config-5.webp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/backpack-config-5.webp" alt="ExpressLRS Backpack telemetry settings for MonitorFPV" data-i18n-alt="backpackConfigTutorial5Alt" loading="lazy"></a><figcaption data-i18n="backpackConfigTutorial5Caption">Open Telemetry, confirm Backpack 1.5.8 or newer, turn telemetry on, and enable Wi-Fi.</figcaption></figure>
           </div>
         </div>
         <div class="monitorfpv-tutorial-group">
           <h3 data-i18n="mapTutorialHeading">Save a map for offline use</h3>
           <div class="monitorfpv-tutorial-gallery">
             <figure>
-              <a href="./monitorfpv-landing-page_files/tutorials/map-tutorial-1.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/map-tutorial-1.png" alt="Map tutorial 1: selecting an offline map area" data-i18n-alt="mapTutorial1Alt" loading="lazy"></a>
+              <a href="./monitorfpv-landing-page_files/tutorials/map-tutorial-1.webp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/map-tutorial-1.webp" alt="Map tutorial 1: selecting an offline map area" data-i18n-alt="mapTutorial1Alt" loading="lazy"></a>
               <figcaption data-i18n="mapTutorial1Caption">Open Map Layers and select the area you want available without internet. Before drawing, zoom into every important part: the highest detail you actually viewed is the detail saved in the download.</figcaption>
             </figure>
             <figure>
-              <a href="./monitorfpv-landing-page_files/tutorials/map-tutorial-2.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/map-tutorial-2.png" alt="Map tutorial 2: naming and downloading a map area" data-i18n-alt="mapTutorial2Alt" loading="lazy"></a>
+              <a href="./monitorfpv-landing-page_files/tutorials/map-tutorial-2.webp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/map-tutorial-2.webp" alt="Map tutorial 2: naming and downloading a map area" data-i18n-alt="mapTutorial2Alt" loading="lazy"></a>
               <figcaption data-i18n="mapTutorial2Caption">After drawing the area, choose a short name without spaces, then select Download.</figcaption>
             </figure>
             <figure>
-              <a href="./monitorfpv-landing-page_files/tutorials/map-tutorial-3.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/map-tutorial-3.png" alt="Map tutorial 3: adding a downloaded map file" data-i18n-alt="mapTutorial3Alt" loading="lazy"></a>
+              <a href="./monitorfpv-landing-page_files/tutorials/map-tutorial-3.webp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/map-tutorial-3.webp" alt="Map tutorial 3: adding a downloaded map file" data-i18n-alt="mapTutorial3Alt" loading="lazy"></a>
               <figcaption data-i18n="mapTutorial3Caption">If the downloaded area does not appear under Saved Areas, select Add file and choose either downloaded file. MonitorFPV loads the matching pair automatically.</figcaption>
             </figure>
             <figure>
-              <a href="./monitorfpv-landing-page_files/tutorials/map-tutorial-4.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/map-tutorial-4.png" alt="Map tutorial 4: verifying a saved offline area" data-i18n-alt="mapTutorial4Alt" loading="lazy"></a>
+              <a href="./monitorfpv-landing-page_files/tutorials/map-tutorial-4.webp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/map-tutorial-4.webp" alt="Map tutorial 4: verifying a saved offline area" data-i18n-alt="mapTutorial4Alt" loading="lazy"></a>
               <figcaption data-i18n="mapTutorial4Caption">A loaded saved area is visibly highlighted against the online background. Verify it before leaving for a location without internet.</figcaption>
             </figure>
           </div>
@@ -1114,11 +1130,11 @@
           <h3 data-i18n="missionTutorialHeading">Plan and save a mission</h3>
           <div class="monitorfpv-tutorial-gallery">
             <figure>
-              <a href="./monitorfpv-landing-page_files/tutorials/plan-tutorial-1.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/plan-tutorial-1.png" alt="Mission tutorial 1: mission point types and route" data-i18n-alt="missionTutorial1Alt" loading="lazy"></a>
+              <a href="./monitorfpv-landing-page_files/tutorials/plan-tutorial-1.webp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/plan-tutorial-1.webp" alt="Mission tutorial 1: mission point types and route" data-i18n-alt="missionTutorial1Alt" loading="lazy"></a>
               <figcaption data-i18n="missionTutorial1Caption">Mission Plan creates the route followed by the center steering gauge. Departure is reached within 500 m; waypoints, objectives and landing are reached within 100 m. Interest points mark references without joining the route. Emergency zones mark areas chosen in advance for a possible emergency or hard landing.</figcaption>
             </figure>
             <figure>
-              <a href="./monitorfpv-landing-page_files/tutorials/plan-tutorial-2.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/plan-tutorial-2.png" alt="Mission tutorial 2: editing, saving, and loading a mission" data-i18n-alt="missionTutorial2Alt" loading="lazy"></a>
+              <a href="./monitorfpv-landing-page_files/tutorials/plan-tutorial-2.webp" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/plan-tutorial-2.webp" alt="Mission tutorial 2: editing, saving, and loading a mission" data-i18n-alt="missionTutorial2Alt" loading="lazy"></a>
               <figcaption data-i18n="missionTutorial2Caption">Undo and Clear edit the plan. Saving and loading follow the same file workflow as Map Layers, and a mission can be attached to a saved map. Load Mission is at the bottom. Verify both map and mission before going offline.</figcaption>
             </figure>
           </div>
