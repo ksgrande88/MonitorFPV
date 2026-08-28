@@ -575,13 +575,26 @@
     }
 
     #monitorfpv-landing-mockup .monitorfpv-tutorial-group + .monitorfpv-tutorial-group {
-      margin-top: 19px;
+      margin-top: 28px;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-tutorials > h2 {
+      margin-bottom: 5px;
+      color: #f4a137;
+      font-size: clamp(25px, 3vw, 36px);
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+    }
+
+    #monitorfpv-landing-mockup .monitorfpv-tutorials > p {
+      margin-top: 0;
+      font-size: 12px;
     }
 
     #monitorfpv-landing-mockup .monitorfpv-tutorial-group h3 {
       margin: 13px 0 8px;
       color: #eef2f3;
-      font-size: 12px;
+      font-size: 16px;
       font-weight: 500;
     }
 
@@ -927,24 +940,24 @@
           <span data-i18n="choosePlatform">Choose your platform</span>
         </div>
         <div class="monitorfpv-platforms">
-          <a class="monitorfpv-platform monitorfpv-ready" data-platform="Windows" href="https://github.com/ksgrande88/MonitorFPV/releases/download/v1.0.0/MonitorFPV-1.0.0-windows-x64.zip">
+          <a class="monitorfpv-platform monitorfpv-ready" data-platform="Windows" href="https://github.com/ksgrande88/MonitorFPV/releases/download/v1.0.1/MonitorFPV-1.0.1-windows-x64.zip">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg>
-            <span><strong>Windows</strong><small data-i18n="firstRelease">Version 1.0</small></span>
+            <span><strong>Windows</strong><small data-i18n="firstRelease">Version 1.0.1</small></span>
           </a>
-          <button class="monitorfpv-platform" type="button" data-platform="macOS" disabled aria-disabled="true">
+          <button class="monitorfpv-platform" type="button" data-platform="Apple" disabled aria-disabled="true">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="12" rx="2"></rect><path d="M2 20h20M7 20l1-4h8l1 4"></path></svg>
-            <span><strong>macOS</strong><small data-i18n="planned">Planned</small></span>
+            <span><strong>macOS / iOS</strong><small data-i18n="planned">Planned</small></span>
           </button>
-          <a class="monitorfpv-platform monitorfpv-ready" data-platform="Android" href="https://github.com/ksgrande88/MonitorFPV/releases/download/v1.0.0/MonitorFPV-1.0.0-android-debug.apk">
+          <a class="monitorfpv-platform monitorfpv-ready" data-platform="Android" href="https://github.com/ksgrande88/MonitorFPV/releases/download/v1.0.1/MonitorFPV-1.0.1-android-debug.apk">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"></rect><path d="M10 18h4"></path></svg>
-            <span><strong>Android</strong><small data-i18n="released">Version 1.0</small></span>
+            <span><strong>Android</strong><small data-i18n="released">Version 1.0.1</small></span>
           </a>
-          <button class="monitorfpv-platform" type="button" data-platform="iOS" disabled aria-disabled="true">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="13" height="18" rx="2"></rect><rect x="15" y="8" width="6" height="12" rx="1.5"></rect><path d="M8 17h3M17.5 17h1"></path></svg>
-            <span><strong>iOS</strong><small data-i18n="planned">Planned</small></span>
-          </button>
+          <a class="monitorfpv-platform monitorfpv-ready" data-platform="Linux" href="https://github.com/ksgrande88/MonitorFPV/releases/download/v1.1.0/MonitorFPV-1.1.0-linux-x64.tar.gz">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M7 8l4 4-4 4M13 16h4"></path></svg>
+            <span><strong>Linux</strong><small data-i18n="linuxRelease">Version 1.1.0</small></span>
+          </a>
         </div>
-        <p class="monitorfpv-download-status" aria-live="polite" data-i18n="downloadStatusInitial">Windows and Android 1.0 are available.</p>
+        <p class="monitorfpv-download-status" aria-live="polite" data-i18n="downloadStatusInitial">Windows, Android, and Linux are available.</p>
       </section>
     </div>
 
@@ -968,7 +981,7 @@
         <ul>
           <li data-i18n="requirement1">Drone with an ExpressLRS telemetry link, version 4.1 or newer.</li>
           <li data-i18n="requirement2">Compatible transmitter or controller with ELRS Backpack 1.5.8 or newer.</li>
-          <li data-i18n="requirement3">Windows or macOS computer, or Android or iOS device, with Wi-Fi.</li>
+          <li data-i18n="requirement3">Windows or Linux computer, or Android device, with Wi-Fi. macOS and iOS are planned.</li>
           <li data-i18n="requirement4">Internet during map preparation; prepared areas remain available offline.</li>
         </ul>
       </section>
@@ -1009,6 +1022,27 @@
       <section class="monitorfpv-copy-section monitorfpv-tutorials">
         <h2 data-i18n="tutorialsHeading">Picture tutorials</h2>
         <p data-i18n="tutorialsIntro">Select any image to inspect it at full size.</p>
+        <div class="monitorfpv-tutorial-group">
+          <h3 data-i18n="elrsFlashingTutorialHeading">ELRS flashing</h3>
+          <div class="monitorfpv-tutorial-gallery">
+            <figure><a href="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-1.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-1.png" alt="ExpressLRS Web Flasher main firmware choices" data-i18n-alt="elrsFlashingTutorial1Alt" loading="lazy"></a><figcaption data-i18n="elrsFlashingTutorial1Caption">Open the official ExpressLRS Web Flasher. A radio Backpack is configured through the transmitter path, not the aircraft receiver path.</figcaption></figure>
+            <figure><a href="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-2.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-2.png" alt="ExpressLRS receiver firmware choice" data-i18n-alt="elrsFlashingTutorial2Alt" loading="lazy"></a><figcaption data-i18n="elrsFlashingTutorial2Caption">Receiver is for the ELRS receiver in the aircraft, not the transmitter Backpack used by MonitorFPV.</figcaption></figure>
+            <figure><a href="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-3.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-3.png" alt="ExpressLRS transmitter firmware choice" data-i18n-alt="elrsFlashingTutorial3Alt" loading="lazy"></a><figcaption data-i18n="elrsFlashingTutorial3Caption">Choose Transmitter to reach the internal or external radio-module firmware.</figcaption></figure>
+            <figure><a href="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-4.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-4.png" alt="ExpressLRS Backpack firmware choices" data-i18n-alt="elrsFlashingTutorial4Alt" loading="lazy"></a><figcaption data-i18n="elrsFlashingTutorial4Caption">Under Backpack Firmware choose Transmitter Module.</figcaption></figure>
+            <figure><a href="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-5.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-5.png" alt="ExpressLRS transmitter Backpack hardware selection" data-i18n-alt="elrsFlashingTutorial5Alt" loading="lazy"></a><figcaption data-i18n="elrsFlashingTutorial5Caption">Choose Backpack 1.5.8 or newer and the exact manufacturer and hardware target.</figcaption></figure>
+            <figure><a href="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-6.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/elrs-web-flasher-6.png" alt="ExpressLRS transmitter Backpack flashing options" data-i18n-alt="elrsFlashingTutorial6Alt" loading="lazy"></a><figcaption data-i18n="elrsFlashingTutorial6Caption">Set the bind phrase, optional 2.4 GHz Wi-Fi details, auto-on interval, and flashing method, then complete the flash.</figcaption></figure>
+          </div>
+        </div>
+        <div class="monitorfpv-tutorial-group">
+          <h3 data-i18n="backpackConfigTutorialHeading">Backpack TX configuration</h3>
+          <div class="monitorfpv-tutorial-gallery">
+            <figure><a href="./monitorfpv-landing-page_files/tutorials/backpack-config-1.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/backpack-config-1.png" alt="Radio tools menu with ExpressLRS selected" data-i18n-alt="backpackConfigTutorial1Alt" loading="lazy"></a><figcaption data-i18n="backpackConfigTutorial1Caption">Open the radio Tools menu and start the ExpressLRS Lua script.</figcaption></figure>
+            <figure><a href="./monitorfpv-landing-page_files/tutorials/backpack-config-2.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/backpack-config-2.png" alt="ExpressLRS Lua transmitter settings" data-i18n-alt="backpackConfigTutorial2Alt" loading="lazy"></a><figcaption data-i18n="backpackConfigTutorial2Caption">Confirm the normal ELRS link settings and open TX Backpack.</figcaption></figure>
+            <figure><a href="./monitorfpv-landing-page_files/tutorials/backpack-config-3.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/backpack-config-3.png" alt="ExpressLRS TX Backpack menu" data-i18n-alt="backpackConfigTutorial3Alt" loading="lazy"></a><figcaption data-i18n="backpackConfigTutorial3Caption">Open Backpack to reach its telemetry and Wi-Fi controls.</figcaption></figure>
+            <figure><a href="./monitorfpv-landing-page_files/tutorials/backpack-config-4.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/backpack-config-4.png" alt="ExpressLRS Backpack enabled on the transmitter" data-i18n-alt="backpackConfigTutorial4Alt" loading="lazy"></a><figcaption data-i18n="backpackConfigTutorial4Caption">Set Backpack to On; leave unrelated DVR and head-tracking options unchanged.</figcaption></figure>
+            <figure><a href="./monitorfpv-landing-page_files/tutorials/backpack-config-5.png" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="openImage"><img src="./monitorfpv-landing-page_files/tutorials/backpack-config-5.png" alt="ExpressLRS Backpack telemetry settings for MonitorFPV" data-i18n-alt="backpackConfigTutorial5Alt" loading="lazy"></a><figcaption data-i18n="backpackConfigTutorial5Caption">Open Telemetry, use Backpack 1.5.8 or newer, choose CRSF, and enable Wi-Fi.</figcaption></figure>
+          </div>
+        </div>
         <div class="monitorfpv-tutorial-group">
           <h3 data-i18n="mapTutorialHeading">Save a map for offline use</h3>
           <div class="monitorfpv-tutorial-gallery">
@@ -1116,10 +1150,11 @@
             heroTitle: 'See the mission <em>beyond the goggles.</em>',
             downloadHeading: 'Download MonitorFPV',
             choosePlatform: 'Choose your platform',
-            firstRelease: 'Version 1.0',
+            firstRelease: 'Version 1.0.1',
             planned: 'Planned',
-            released: 'Version 1.0',
-            downloadStatusInitial: 'Windows and Android 1.0 are available.',
+            released: 'Version 1.0.1',
+            linuxRelease: 'Version 1.1.0',
+            downloadStatusInitial: 'Windows, Android, and Linux are available.',
             fieldAwareness: 'Field awareness',
             whatHeading: 'What is MonitorFPV?',
             whatText: 'MonitorFPV receives telemetry from ExpressLRS-equipped drones and displays useful flight information on a computer or mobile device. It is intended for a ground-support operator assisting an FPV pilot in the field.',
@@ -1148,8 +1183,8 @@
           platformStatus: {
             Windows: 'Starting the Windows ZIP download.',
             Android: 'Starting the Android APK download.',
-            macOS: 'macOS is on the roadmap and is not available yet.',
-            iOS: 'iOS is on the roadmap and is not available yet.'
+            Linux: 'Starting the Linux x64 archive download.',
+            Apple: 'macOS and iOS are planned and are not available yet.'
           }
         },
         'pt-BR': {
@@ -1169,9 +1204,9 @@
             heroTitle: 'Veja a missão <em>além dos óculos.</em>',
             downloadHeading: 'Baixe o MonitorFPV',
             choosePlatform: 'Escolha sua plataforma',
-            firstRelease: 'Versão 1.0',
+            firstRelease: 'Versão 1.0.1',
             planned: 'Planejado',
-            released: 'Versão 1.0',
+            released: 'Versão 1.0.1',
             downloadStatusInitial: 'Windows e Android 1.0 estão disponíveis.',
             fieldAwareness: 'Consciência em campo',
             whatHeading: 'O que é o MonitorFPV?',
@@ -1222,9 +1257,9 @@
             heroTitle: 'Бачте місію <em>за межами окулярів.</em>',
             downloadHeading: 'Завантажити MonitorFPV',
             choosePlatform: 'Оберіть платформу',
-            firstRelease: 'Версія 1.0',
+            firstRelease: 'Версія 1.0.1',
             planned: 'Заплановано',
-            released: 'Версія 1.0',
+            released: 'Версія 1.0.1',
             downloadStatusInitial: 'Windows та Android 1.0 доступні.',
             fieldAwareness: 'Ситуаційна обізнаність',
             whatHeading: 'Що таке MonitorFPV?',
@@ -1416,13 +1451,61 @@
         }
       };
 
+      const addedTutorialText = {
+        'en-US': {
+          elrsFlashingTutorialHeading: 'ELRS flashing',
+          elrsFlashingTutorial1Caption: 'Open the official ExpressLRS Web Flasher. A radio Backpack is configured through the transmitter path, not the aircraft receiver path.',
+          elrsFlashingTutorial2Caption: 'Receiver is for the ELRS receiver in the aircraft, not the transmitter Backpack used by MonitorFPV.',
+          elrsFlashingTutorial3Caption: 'Choose Transmitter to reach the internal or external radio-module firmware.',
+          elrsFlashingTutorial4Caption: 'Under Backpack Firmware choose Transmitter Module.',
+          elrsFlashingTutorial5Caption: 'Choose Backpack 1.5.8 or newer and the exact manufacturer and hardware target.',
+          elrsFlashingTutorial6Caption: 'Set the bind phrase, optional 2.4 GHz Wi-Fi details, auto-on interval, and flashing method, then complete the flash.',
+          backpackConfigTutorialHeading: 'Backpack TX configuration',
+          backpackConfigTutorial1Caption: 'Open the radio Tools menu and start the ExpressLRS Lua script.',
+          backpackConfigTutorial2Caption: 'Confirm the normal ELRS link settings and open TX Backpack.',
+          backpackConfigTutorial3Caption: 'Open Backpack to reach its telemetry and Wi-Fi controls.',
+          backpackConfigTutorial4Caption: 'Set Backpack to On; leave unrelated DVR and head-tracking options unchanged.',
+          backpackConfigTutorial5Caption: 'Open Telemetry, use Backpack 1.5.8 or newer, choose CRSF, and enable Wi-Fi.'
+        },
+        'pt-BR': {
+          elrsFlashingTutorialHeading: 'Grava\u00e7\u00e3o do ELRS',
+          elrsFlashingTutorial1Caption: 'Abra o ExpressLRS Web Flasher oficial. O Backpack do r\u00e1dio usa o caminho Transmitter, n\u00e3o o receptor da aeronave.',
+          elrsFlashingTutorial2Caption: 'Receiver atualiza o receptor ELRS da aeronave; n\u00e3o \u00e9 a op\u00e7\u00e3o do Backpack usado pelo MonitorFPV.',
+          elrsFlashingTutorial3Caption: 'Escolha Transmitter para acessar o firmware do m\u00f3dulo interno ou externo do r\u00e1dio.',
+          elrsFlashingTutorial4Caption: 'Em Backpack Firmware, escolha Transmitter Module.',
+          elrsFlashingTutorial5Caption: 'Escolha Backpack 1.5.8 ou mais recente, o fabricante e o alvo de hardware exato.',
+          elrsFlashingTutorial6Caption: 'Defina bind phrase, Wi-Fi opcional de 2,4 GHz, intervalo autom\u00e1tico e m\u00e9todo de grava\u00e7\u00e3o; depois conclua.',
+          backpackConfigTutorialHeading: 'Configura\u00e7\u00e3o do Backpack TX',
+          backpackConfigTutorial1Caption: 'Abra Tools no r\u00e1dio e inicie o script Lua do ExpressLRS.',
+          backpackConfigTutorial2Caption: 'Confirme o link ELRS normal e abra TX Backpack.',
+          backpackConfigTutorial3Caption: 'Abra Backpack para acessar telemetria e Wi-Fi.',
+          backpackConfigTutorial4Caption: 'Defina Backpack como On e mantenha DVR e head tracking inalterados.',
+          backpackConfigTutorial5Caption: 'Abra Telemetry, use Backpack 1.5.8 ou mais recente, escolha CRSF e habilite Wi-Fi.'
+        },
+        'uk-UA': {
+          elrsFlashingTutorialHeading: '\u041f\u0440\u043e\u0448\u0438\u0432\u0430\u043d\u043d\u044f ELRS',
+          elrsFlashingTutorial1Caption: '\u0412\u0456\u0434\u043a\u0440\u0438\u0439\u0442\u0435 ExpressLRS Web Flasher. Backpack \u0440\u0430\u0434\u0456\u043e \u043d\u0430\u043b\u0430\u0448\u0442\u043e\u0432\u0443\u0454\u0442\u044c\u0441\u044f \u0447\u0435\u0440\u0435\u0437 Transmitter, \u0430 \u043d\u0435 Receiver.',
+          elrsFlashingTutorial2Caption: 'Receiver \u043f\u0440\u0438\u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0439 \u0434\u043b\u044f \u0431\u043e\u0440\u0442\u043e\u0432\u043e\u0433\u043e ELRS-\u043f\u0440\u0438\u0439\u043c\u0430\u0447\u0430, \u0430 \u043d\u0435 Backpack MonitorFPV.',
+          elrsFlashingTutorial3Caption: '\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c Transmitter \u0434\u043b\u044f \u043f\u0440\u043e\u0448\u0438\u0432\u043a\u0438 \u043c\u043e\u0434\u0443\u043b\u044f \u0440\u0430\u0434\u0456\u043e.',
+          elrsFlashingTutorial4Caption: '\u0423 Backpack Firmware \u0432\u0438\u0431\u0435\u0440\u0456\u0442\u044c Transmitter Module.',
+          elrsFlashingTutorial5Caption: '\u0412\u0438\u0431\u0435\u0440\u0456\u0442\u044c Backpack 1.5.8 \u0430\u0431\u043e \u043d\u043e\u0432\u0456\u0448\u0438\u0439, \u0432\u0438\u0440\u043e\u0431\u043d\u0438\u043a\u0430 \u0456 \u0442\u043e\u0447\u043d\u0443 \u0430\u043f\u0430\u0440\u0430\u0442\u043d\u0443 \u0446\u0456\u043b\u044c.',
+          elrsFlashingTutorial6Caption: '\u0417\u0430\u0434\u0430\u0439\u0442\u0435 bind phrase, Wi-Fi 2,4 \u0413\u0413\u0446, \u0456\u043d\u0442\u0435\u0440\u0432\u0430\u043b \u0456 \u043c\u0435\u0442\u043e\u0434 \u043f\u0440\u043e\u0448\u0438\u0432\u0430\u043d\u043d\u044f.',
+          backpackConfigTutorialHeading: '\u041d\u0430\u043b\u0430\u0448\u0442\u0443\u0432\u0430\u043d\u043d\u044f Backpack TX',
+          backpackConfigTutorial1Caption: '\u0412\u0456\u0434\u043a\u0440\u0438\u0439\u0442\u0435 Tools \u043d\u0430 \u0440\u0430\u0434\u0456\u043e \u0456 \u0437\u0430\u043f\u0443\u0441\u0442\u0456\u0442\u044c Lua-\u0441\u043a\u0440\u0438\u043f\u0442 ExpressLRS.',
+          backpackConfigTutorial2Caption: '\u041f\u0435\u0440\u0435\u0432\u0456\u0440\u0442\u0435 \u0437\u0432\u0438\u0447\u0430\u0439\u043d\u0456 \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u0438 ELRS \u0456 \u0432\u0456\u0434\u043a\u0440\u0438\u0439\u0442\u0435 TX Backpack.',
+          backpackConfigTutorial3Caption: '\u0412\u0456\u0434\u043a\u0440\u0438\u0439\u0442\u0435 Backpack \u0434\u043b\u044f \u043a\u0435\u0440\u0443\u0432\u0430\u043d\u043d\u044f \u0442\u0435\u043b\u0435\u043c\u0435\u0442\u0440\u0456\u0454\u044e \u0442\u0430 Wi-Fi.',
+          backpackConfigTutorial4Caption: '\u0423\u0432\u0456\u043c\u043a\u043d\u0456\u0442\u044c Backpack; \u043d\u0435 \u0437\u043c\u0456\u043d\u044e\u0439\u0442\u0435 DVR \u0456 head tracking.',
+          backpackConfigTutorial5Caption: '\u0423 Telemetry \u0432\u0438\u0431\u0435\u0440\u0456\u0442\u044c Backpack 1.5.8+, CRSF \u0456 \u0443\u0432\u0456\u043c\u043a\u043d\u0456\u0442\u044c Wi-Fi.'
+        }
+      };
+
       let currentLanguage = 'en-US';
       let currentTutorialIndex = 0;
       let currentTutorialTrigger = null;
 
       function activeText() {
         const language = languages[currentLanguage] || languages['en-US'];
-        return { ...language.text, ...(onboardingText[currentLanguage] || onboardingText['en-US']) };
+        return { ...language.text, ...(onboardingText[currentLanguage] || onboardingText['en-US']), ...(addedTutorialText[currentLanguage] || addedTutorialText['en-US']) };
       }
 
       function setTutorialZoom(zoomed) {
@@ -1468,7 +1551,20 @@
       function applyLanguage(languageCode) {
         const language = languages[languageCode] || languages['en-US'];
         currentLanguage = languageCode in languages ? languageCode : 'en-US';
-        const localizedText = { ...language.text, ...(onboardingText[currentLanguage] || onboardingText['en-US']) };
+        const localizedText = { ...language.text, ...(onboardingText[currentLanguage] || onboardingText['en-US']), ...(addedTutorialText[currentLanguage] || addedTutorialText['en-US']) };
+        const platformAvailability = {
+          'en-US': 'Windows, Android, and Linux are available.',
+          'pt-BR': 'Windows, Android e Linux est\u00e3o dispon\u00edveis.',
+          'uk-UA': 'Windows, Android \u0442\u0430 Linux \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u0456.'
+        };
+        localizedText.downloadStatusInitial = platformAvailability[currentLanguage];
+        localizedText.linuxRelease = currentLanguage === 'pt-BR' ? 'Vers\u00e3o 1.1.0' : currentLanguage === 'uk-UA' ? '\u0412\u0435\u0440\u0441\u0456\u044f 1.1.0' : 'Version 1.1.0';
+        const platformRequirement = {
+          'en-US': 'Windows or Linux computer, or Android device, with Wi-Fi. macOS and iOS are planned.',
+          'pt-BR': 'Computador Windows ou Linux, ou dispositivo Android, com Wi-Fi. macOS e iOS est\u00e3o planejados.',
+          'uk-UA': '\u041a\u043e\u043c\u043f\u2019\u044e\u0442\u0435\u0440 Windows \u0430\u0431\u043e Linux \u0447\u0438 \u043f\u0440\u0438\u0441\u0442\u0440\u0456\u0439 Android \u0437 Wi-Fi. macOS \u0442\u0430 iOS \u0437\u0430\u043f\u043b\u0430\u043d\u043e\u0432\u0430\u043d\u0456.'
+        };
+        localizedText.requirement3 = platformRequirement[currentLanguage];
 
         root.querySelectorAll('[data-i18n]').forEach((element) => {
           const value = localizedText[element.dataset.i18n];
