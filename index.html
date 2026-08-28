@@ -1699,9 +1699,16 @@
         });
       });
 
-      let savedLanguage = 'en-US';
-      try { savedLanguage = localStorage.getItem('monitorfpv-language') || 'en-US'; } catch (_) { /* use English */ }
-      applyLanguage(savedLanguage);
+      const detectPrimaryLanguage = () => {
+        const browserLanguage = String(navigator.language || '').toLowerCase();
+        if (browserLanguage === 'pt' || browserLanguage.startsWith('pt-')) return 'pt-BR';
+        if (browserLanguage === 'uk' || browserLanguage.startsWith('uk-')) return 'uk-UA';
+        return 'en-US';
+      };
+
+      let initialLanguage = detectPrimaryLanguage();
+      try { initialLanguage = localStorage.getItem('monitorfpv-language') || initialLanguage; } catch (_) { /* use detected language */ }
+      applyLanguage(initialLanguage);
     })();
   </script>
 </div>
